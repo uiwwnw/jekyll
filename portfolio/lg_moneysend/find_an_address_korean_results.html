@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>뒤로가기버튼</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">주소검색</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <div class="box_inp_wrap del_on">
+                    <label class="box_inp">
+                        <input type="text" placeholder="검색어를 입력해주세요." value="성산">
+                    </label>
+                    <button class="_delete"><i class="x_close_small"></i></button>
+                </div>
+                <p class="help_large">검색어는 2글자 이상 입력해주세요.</p>
+                <div class="btn_wrap">
+                    <div>
+                        <button class="btn_block btn_danger" type="button">
+                            <span>검색</span>
+                        </button>
+                    </div>
+                </div>
+                <p class="help_large">ex) 동해시 중앙로, 영수 중앙동, 도움5로 19, 어진동 307-19</p>
+                <div class="results_wrap">
+                    <p class="_title">검색결과 <strong class="_results_num">4</strong>건</p>
+                    <div class="address_wrap">
+                        <!--<label class="_rdo_box">-->
+                            <!--<input type="radio" name="address">-->
+                            <!--<i class="_rdo"></i>-->
+                        <!--</label>-->
+                        <p class="_rdo_txt">
+                            <span class="_br">도로명</span>
+                            [63643] 제주특별자치도 서귀포시<strong>성산</strong> 읍<strong> 성산</strong>등용로 4
+                        </p>
+                        <p class="_rdo_txt">
+                            <span class="_br">지번</span>
+                            [63643] 제주특별자치도 서귀포시 <strong>성산</strong>읍 <strong>성산</strong>
+                            등용로 4
+                        </p>
+                        <p class="_rdo_txt">
+                            <span class="_br">영문</span>
+                            [63643] Jeju Text Text Text Text Text
+                            Text Text Text Text
+                        </p>
+                    </div>
+                    <div class="address_wrap">
+                        <p class="_rdo_txt">
+                            <span class="_br">도로명</span>
+                            [63643] 제주특별자치도 서귀포시<strong>성산</strong>
+                            읍 <strong>성산</strong>등용로 4
+                        </p>
+                        <p class="_rdo_txt">
+                            <span class="_br">지번</span>
+                            [63643] 제주특별자치도 서귀포시 <strong>성산</strong>읍 <strong>성산</strong>
+                            등용로 4
+                        </p>
+                        <p class="_rdo_txt">
+                            <span class="_br">영문</span>
+                            [63643] Jeju Text Text Text Text Text
+                            Text Text Text Text
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+</body>
+</html>

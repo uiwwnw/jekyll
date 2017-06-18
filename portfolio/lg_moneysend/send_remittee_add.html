@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>뒤로가기아이콘</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">수취인 추가</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <div class="form form_line">
+                    <span class="form_title">수취 국가</span>
+                    <button class="form_context slt_wrap">
+                        <span class="_slt">
+                           미국(USA)
+                        </span>
+                    </button>
+                </div>
+                <div class="form">
+                    <span class="form_title">국적</span>
+                    <button class="form_context slt_wrap">
+                        <span class="_slt">
+                           국적 선택
+                        </span>
+                    </button>
+                    <p class="help_large">국적을 선택해주세요.</p>
+                </div>
+                <div class="form">
+                    <span class="form_title">이름</span>
+                    <div class="_form_flex">
+                        <div class="box_inp_wrap" style="width: 30%">
+                            <label class="box_inp">
+                                <input type="text" placeholder="성(영문)">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="Pinyin(영문)">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="이름(영문)">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form ">
+                    <span class="form_title">생년월일</span>
+                    <div class="_form_flex">
+                        <div class="box_inp_wrap" style="width: 30%;">
+                            <label class="box_inp">
+                                <input type="text" placeholder="YYYY">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="MM">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="DD">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                    </div>
+                    <p class="help_large">이름을 입력해주세요.</p>
+                </div>
+                <div class="form">
+                    <span class="form_title">송금인-수취인 관계</span>
+                    <div class="_form_flex">
+                        <div>
+                            <div class="slt_wrap">
+                                <select class="_slt">
+                                    <option value="수취인 관계">수취인 관계</option>
+                                    <option value="수취인 관계">수취인 관계</option>
+                                    <option value="수취인 관계">수취인 관계</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <span class="form_title">휴대폰번호</span>
+                    <div class="_form_flex">
+                        <div style="width: 30%;">
+                            <div class="slt_wrap">
+                                <select class="_slt">
+                                    <option value="+1">+1</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+1">+1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="(ex. 01012345678)">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                    </div>
+                    <p class="help_large">휴대폰번호를 확인해주세요.</p>
+                </div>
+                <div class="form form_line">
+                    <span class="form_title">주소</span>
+                    <div class="_form_flex">
+                        <div style="width: 60%;">
+                            <button class="slt_wrap">
+                                <span class="_slt">
+                                   도시
+                                </span>
+                            </button>
+                        </div>
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="Post Code">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                    </div>
+                    <div class="_form_flex">
+                        <div class="box_inp_wrap">
+                            <label class="box_ta rows_auto">
+                                <textarea placeholder="상세주소(영문)"></textarea>
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                            <!--<label class="box_inp">-->
+                                <!--<input type="text" placeholder="상세주소(영문)">-->
+                            <!--</label>-->
+                        </div>
+                    </div>
+                    <p class="help_large">주소를 입력해주세요.</p>
+                </div>
+                <div class="form">
+                    <span class="form_title">계좌수취</span>
+                    <div class="_form_flex">
+                        <div>
+                            <div class="slt_wrap">
+                                <select class="_slt">
+                                    <option value="계좌 수취(Account)">계좌 수취(Account)</option>
+                                    <option value="방문수취(Agent)">방문수취(Agent)</option>
+                                    <option value="배달수취(Delivery)">배달수취(Delivery)</option>
+                                </select>
+                            </div>
+                            <p class="help_large">수취 방법 세부 입력 오류 안내 문구 노출 위치</p>
+                        </div>
+                    </div>
+                    <div class="_form_flex">
+                        <div style="width: 30%;">
+                            <button class="slt_wrap">
+                                <span class="_slt">
+                                  은행
+                                </span>
+                            </button>
+                        </div>
+                        <div class="box_inp_wrap">
+                            <button class="slt_wrap">
+                                <span class="_slt">
+                                  지점명
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--<div class="_form_flex">-->
+                        <!--<div class="box_inp_wrap">-->
+                            <!--<label class="box_inp">-->
+                                <!--<input type="text" placeholder="은행 지점 명 or SWIFT Code">-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <!--<div class="form">-->
+                    <!--<button class="form_context btn_txt" type="button">-->
+                        <!--<span>SWIFT/BIC Code 검색</span><i class="next_arrow"></i>-->
+                    <!--</button>-->
+                <!--</div>-->
+                <!--<div class="form box_inp_wrap">-->
+                    <!--<label class="box_inp">-->
+                        <!--<input type="text" placeholder="국가별 은행 인식 코드(Sort,ABA 등)">-->
+                    <!--</label>-->
+                <!--</div>-->
+                <div class="btn_wrap">
+                    <div>
+                        <button class="btn_block btn_danger" type="button">
+                            <span>다음</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+</body>
+
+</html>

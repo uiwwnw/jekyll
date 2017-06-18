@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>galaxy store</title>
+
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bx slider -->
+    <link href="lib/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <div class="row">
+            <div class="col-xs-2">
+                <!--<a href="#"><h1 class="logo green"><span>galaxy</span> <span>upcyling</span></h1></a>-->
+                <a href="#"><h1 class="logo green"><img src="img/logo.png" alt="galaxy upcyling"></h1></a>
+            </div>
+            <div class="col-xs-6">
+                <nav class="gnb">
+
+                    <!-- <a href="#"><h2 class="navMenu">home</h2></a> -->
+                    <!-- <a href="#"><h2 class="navMenu">getting started</h2></a> -->
+                    <a href="#"><h2 class="navMenu">dashboard</h2></a>
+                    <a href="#"><h2 class="navMenu">getting started</h2></a>
+                    <!-- <a href="#"><h2 class="navMenu">blog</h2></a> -->
+                    <!-- <a href="#"><h2 class="navMenu">about us</h2></a> -->
+                </nav>
+            </div>
+            <div class="col-xs-3 searchWrap">
+              <form class="searchBar" role="search" action="{% url 'dev:search' %}" method="get">
+                  <input id="searchKeyword" onkeyup="stoppedTyping()" type="search" name="q" class="form-control" placeholder="Search">
+                  <button id="searchButton" type="submit" class="btn btn-default" disabled style="display:none;">Search</button>
+                  <i class="glyphicon glyphicon-search"></i>
+              </form>
+            </div>
+            <div class="col-xs-1 dropWrap">
+                <div class="dropmenu green_type">
+                    <span class="frontTxt">darren</span>
+                    <div class="list">
+                        <a href="#">Profile</a>
+                        <a href="#">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   <section class="blogSection noNormal">
+     <article class="projectArticle">
+       <div class="row">
+           <div class="col-xs-3 smallPadding"><h4 class="project_head" style="color:#8dc73f;">ABOUT US
+             <span class="num"></span><i class="liner" style="background: #8dc73f;"></i></h4>
+           </div>
+       </div>
+       <div class="row">
+         <div class="col-xs-12">
+           <div class="blog_txt normal">
+             <p>
+               Galaxy -up cycling is no longer open platform for users give ear maker provides the tools to help older Galaxy Bring life back to the
+                terminal is not in use. If anyone has creative ideas utilizing the Galaxy is a maker you can have the pleasure of sharing Raise the S / W,<br>
+                H / W, drawings or ideas. Or by using a different user easily accept the idea can also br fun to raise. Through this platform, we will pursue
+                you with the following values.
+           </div>
+         </div>
+       </div>
+     </articel>
+   </section>
+
+    <section class="maincontentSection noNormal green">
+         <article class="maincontentArticle noNormal">
+            <h3 class="mc_title"><img src="img/logo2.png" alt="galaxy upcyling"></h3>
+            <p class="mc_sub"><img src="img/logo3.png" alt="Anyone can save the earth with your galaxy"></p>
+        </article>
+    </section>
+    <section class="profileSection">
+        <article class="projectArticle">
+            <div class="row">
+                <div class="col-xs-3 smallPadding">
+                  <h4 class="project_head" style="color:#ffa92d;">OUR MISSION
+                    <span class="num"></span>
+                    <i class="liner" style="background: #ffa92d;"></i></h4>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="blog_txt normal">
+                  <p>
+                  Our mission is simple : Fun, Open, Easy and Environment
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 smallPadding">
+                    <div class="project_content aboutus" style="background-image: url(img/aboutus_fun_img.jpg);">
+                        <div class="project_flag theme-h theme-gr">
+                            <p class="project_title theme-title">FUN</p>
+                            <p class="project_txt theme-txt">
+                            What makes something an enjoyable
+                            activity. It is easy to improve the lives
+                            and realize creative ideas to share
+                            with those who give the story a great
+                            pleasure. Both seek to be a Maker to
+                            create new things to learn in the
+                            process of growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 smallPadding">
+                    <div class="project_content aboutus" style="background-image: url(img/aboutus_open_img.jpg);">
+                        <div class="project_flag theme-h2 theme-ligr">
+                            <p class="project_title theme-title">OPEN</p>
+                            <p class="project_txt theme-txt">
+                              Collective intelligence, the era of
+                              open source. By sharing what
+                              someone else created and developed
+                              in someone who may get the
+                              pleasure anyone can also earn
+                              money by merchandising.
+                              Constantly expecting a great idea
+                              grow through sharing the road.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 smallPadding">
+                    <div class="project_content aboutus" style="background-image: url(img/aboutus_easy_img.jpg);">
+                        <div class="project_flag theme-h theme-J">
+                            <p class="project_title theme-title">EASY</p>
+                            <p class="project_txt theme-txt">
+                              Everything is getting easier thanks
+                              to advances in technology. It is not
+                              difficult to realize creative idea as in
+                              the past. You can easily create a
+                              project and to share and spread.
+                              Anyone AU seeks to create a platform
+                              that can easily be used.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 smallPadding">
+                    <div class="project_content aboutus" style="background-image: url(img/aboutus_environment_img.jpg);">
+                        <div class="project_flag theme-h2 theme-darkgr">
+                            <p class="project_title theme-title">ENVIRONMENT</p>
+                            <p class="project_txt theme-txt">
+                              Each year tons of discarded without
+                              a cell phone can not be used in or
+                              moisten a closet in the home. If you
+                              have creative ideas can make a
+                              better life, it can improve the
+                              environment, somewhere in a
+                              precious resource that can be fully
+                              untillized for educational purpose.
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+    <section class="ourteamSection noNormal">
+      <article class="ourteamArticle">
+        <div class="row">
+          <div class="col-xs-3 smallPadding">
+            <h4 class="project_head" style="color:#8dc73f;">OUR TEAM
+              <span class="num"></span>
+              <i class="liner" style="background: #8dc73f;"></i></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="blog_txt normal">
+              <p>
+                We are a venture development project in -house Samsung’s wireless division Creative Lab (hereafter C-Lab).<br>
+                By S / W, H / W, 11 teams consisting og developer organizations based in the city of Suwon Samsung Digital maetanding</p>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="about_btn">
+              <button class="yellow_btn"><span>We're hiring!</span></button>
+            </div>
+          </div>
+          <div class="row" style="position: relative;">
+            <div class="bxslider">
+              <div class="item" slide-index="0">
+                <img src="img/sample2.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+              <div class="item before" slide-index="1">
+                <img src="img/sample.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+              <div class="item on" slide-index="2">
+                <img src="img/sample.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+              <div class="item after" slide-index="3">
+                <img src="img/sample.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+              <div class="item" slide-index="4">
+                <img src="img/sample.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+              <div class="item" slide-index="5">
+                <img src="img/sample.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+              <div class="item" slide-index="6">
+                <img src="img/sample.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+              <div class="item" slide-index="7">
+                <img src="img/sample.jpg" class="slide_photo" alt="">
+                <p class="name">darren</p>
+                <p class="info">email ddd aaa</p>
+              </div>
+            </div>
+            <div class="slider_btn">
+              <div class="prev_btn"></div>
+              <div class="next_btn"></div>
+            </div>
+          </div>
+
+      </article>
+    </section>
+
+    <section class="aboutUsSection">
+      <article class="projectArticle">
+        <div class="row">
+            <div class="col-xs-3 smallPadding"><h4 class="project_head" style="color:#8dc73f;">HISTORY
+              <span class="num"></span><i class="liner" style="background: #8dc73f;"></i></h4>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="blog_txt normal">
+              <p>
+                In Febuary 2016 the team had a lot of things since the beginning kkuryeojin. Samsung Electronics against the developer in September
+                were closed beta open in October went to C-Lab Fai<br></p>
+              <p class="txt_em" style="color:#333333;">As Seen On</p>
+            </div>
+          </div>
+        </div>
+      </articel>
+    </section>
+
+    <section class="dummySection noNormal">
+      <article class="ourteamArticle noNormal">
+        <!-- <div class="row">
+          <div class="col-xs-12">
+            <div class="aboutus_img">
+             <img src="../html/img/aboutus_dummy_img.jpg" alt="" >
+            </div>
+          </div>
+        </div> -->
+      </article>
+    </section>
+
+    <section class="blogSection">
+      <article class="blogArticle">
+        <div class="row">
+          <div class="col-xs-12">
+          </div>
+        </div>
+      </articel>
+    </section>
+
+
+    <footer>
+        <div>
+            <a href="#" class="footer_txt green">ABOUT US</a>
+            <a href="#" class="footer_txt green">BLOG</a>
+            <a href="#" class="footer_txt green">GETTING STARTED</a>
+            <a href="#" class="footer_txt green">DOCUMENTATION</a>
+            <a href="#" class="footer_txt green">STATUS</a>
+            <a href="#" class="footer_txt green">CONTACT</a>
+        </div>
+        <div>
+            <a href="#" class="footer_txt whiteGray">TERMS OF SERVICE</a>
+            <a href="#" class="footer_txt whiteGray">PRIVACY POLICY</a>
+        </div>
+        <img src="img/samsung_logo.png" class="footer_logo" alt="삼성">
+        <div>
+            <cite class="footer_sm_txt">ALL CONTENTS COPYRIGHT &copy; SAMSUNG ELECTRONICS CO., LTD.</cite>
+        </div>
+        <div>
+            <a href="#" class="footer_sm_txt whiteGray divide">samsung.com</a>
+            <a href="#" class="footer_sm_txt whiteGray divide">samsungmobilexpress.com </a>
+            <a href="#" class="footer_sm_txt whiteGray divide">samsung newsroom</a>
+            <a href="#" class="footer_sm_txt whiteGray divide">samung develeopers</a>
+            <a href="#" class="footer_sm_txt whiteGray divide">design samsung</a>
+        </div>
+    </footer>
+</div>
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="js/bootstrap.min.js"></script>
+<!-- IE 말줄임 js -->
+<script src="lib/jQuery.dotdotdot/jquery.dotdotdot.min.js"></script>
+<!-- bxslider -->
+<script src="lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+
+<script>
+$('.dropmenu').on({
+            "click": function () {
+                var th = $(this);
+                th.toggleClass('active');
+            },
+            "mouseleave":function () {
+                var th = $(this);
+                th.removeClass('active');
+            }
+        });
+
+// bx slider
+var slider;
+slider = $('.bxslider').bxSlider({
+pager:false,
+minSlides:5,
+moveSlides:1,
+maxSlides:5,
+slideWidth:180,
+  nextSelector: '.next_btn',
+  prevSelector: '.prev_btn',
+  nextText: '<i class="glyphicon glyphicon-menu-right"></i>',
+  prevText: '<i class="glyphicon glyphicon-menu-left"></i>'
+// startSlide:4
+});
+$('.slider_btn a').on({
+        "click": function () {
+            var th = $(this),
+            pa = th.parents('.row').find('.bx-wrapper'),
+            sli_track=pa.find('.bxslider');
+// ind=sli_item.attr('slide-index');
+
+            var current = slider.getCurrentSlide();
+            var slideQty = slider.getSlideCount();
+            var num = current + 2;
+
+            if(num==slideQty){
+num = 0
+            }else if(num==slideQty+1){
+              num=1
+            }
+            var sli_item=sli_track.children('[slide-index="'+num+'"]');
+
+
+// alert(current)
+            // th.toggleClass('active');
+            console.log(slideQty,current,num)
+            // alert('d')
+            addOn(num);
+function addOn(num){
+  sli_track.find('.item').removeClass('on after before');
+  sli_item.addClass('on');
+  sli_item.next().addClass('after');
+  sli_item.prev().addClass('before');
+}
+        }
+    });
+// $('body').click(function(){
+
+
+// })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+$positive: #2c4c7f;
+$positive-name: 'positive';
+$assertive: #ff3041;
+$assertive-name: 'assertive';
+$calm: #c1ff89;
+$calm-name: 'calm';
+$light: #ffffff;
+$light-name: 'light';
+$dark: #333333;
+$dark-name:'dark';
+$gray: #7D7D7D;
+$gray-name: 'gray';
+
+$color-list: (
+        $positive-name $positive,
+        $assertive-name $assertive,
+        $calm-name $calm,
+        $light-name $light,
+        $dark-name $dark,
+        $gray-name $gray,
+);
+@each $value in $color-list {
+  .#{nth($value,1)} {
+    color: nth($value, 2);
+  }
+  .#{nth($value,1)}-bg {
+    background: nth($value, 2);
+  }
+  .#{nth($value,1)}-bd {
+    border-color: nth($value, 2);
+  }
+}

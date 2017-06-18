@@ -1,0 +1,45 @@
+@charset "utf-8";
+@mixin animation($target:all,$time:1s,$type:ease){
+  transition: $target $time $type;
+}
+
+@keyframes popup-view {
+  0%{
+    opacity: 0;}
+  100%{
+    opacity: 1;}
+}
+@keyframes popup-close {
+  0%{
+    opacity: 1;}
+  100%{
+    opacity: 0;}
+}
+@keyframes popup_content_view {
+  0%{transform: scale(0.5);}
+  60%{transform: scale(1.1);}
+  100%{transform: scale(1);}
+}
+@keyframes popup_content_close {
+  0%{transform: scale(1);}
+  100%{transform: scale(0.3);}
+}
+
+
+@keyframes nav-view {
+  0%{
+    left:-100%;
+  }
+  100%{
+    left: 0;
+  }
+}
+
+@keyframes nav-close {
+  0%{
+    left: 0;
+  }
+  100%{
+    left:-100%;
+  }
+}

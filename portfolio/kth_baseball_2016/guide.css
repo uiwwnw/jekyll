@@ -1,0 +1,11 @@
+@charset "utf-8";
+body { background:#5a5a5a url(bodybg.png) repeat left top; }
+* { margin:0; padding:0; list-style:none; }
+
+header { margin:0 0 15px; }
+header h1 { background:black url('logo_big.png') no-repeat 20px 20px;  height:60px; text-indent:-999999em; }
+
+body >.body { background:white; margin:0 15px 15px; padding:20px; border:1px dotted black; }
+
+.body>h2 { font-size:14pt; margin:20px 0 10px; background:url('bg_h2.png') no-repeat left top; height:31px; padding:5px 0 0 45px; text-shadow:1px 1px 1px #dbdbdb; }
+.body>h2:first-child { margin-top:0; }

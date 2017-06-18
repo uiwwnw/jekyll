@@ -1,0 +1,58 @@
+@charset "utf-8";
+//부드러운 폰트 처리
+
+body{
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-weight: 400;
+}
+
+//fontface
+
+
+//font size
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+  //html[lang="ko"] &{
+  //  font-size: $size; //Fallback in px
+  //  font-size: calculateRem($size);
+  //}
+  //html[lang="en"] &{
+  //  font-size: $size - 2; //Fallback in px
+  //  font-size: calculateRem($size - 2);
+  //}
+}
+
+
+
+
+
+
+
+//font weight
+
+
+//line-height
+@function calculatePx($size) {
+  @return $size;
+}
+@mixin lineHeight($size) {
+  line-height: $size * 1.1; //Fallback in px
+  line-height: calculatePx($size);
+  //html[lang="ko"] &{
+  //  line-height: $size; //Fallback in px
+  //  line-height: calculateRem($size);
+  //}
+  //html[lang="en"] &{
+  //  line-height: $size - 2; //Fallback in px
+  //  line-height: calculateRem($size - 2);
+  //}
+}

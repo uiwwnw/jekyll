@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>뒤로가기</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">송금하기</h1>
+        <!--<button class="_btn_right btn_icon" type="button">-->
+        <!--<span>송금이력아이콘</span>-->
+        <!--<i class="icon-send"></i>-->
+        <!--</button>-->
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <!--
+            상단 align_self 및 하단 _align_self 존재 관련
+            현 화면에서 _align_self부분만 화면 정 가운데 노출되어야 하고 나머지는
+            스크롤 후 보여져야 한다는 ui때문에
+            화면이 같은데 구조가 다름.
+            send_main.html
+            과 상이함
+            -->
+            <article>
+                <div class="fixed_drop">
+                    <div class="_front normal-toggle-1">
+                        <button class="btn_small btn_calm" data-click="false"><span>입금 대기</span></button>
+                        <span>PIN번호/가상 계좌 확인</span>
+                    </div>
+                    <div class="_hidden">
+                        <p><span>PIN : </span><strong>1312312123123</strong>
+                            <button class="btn_icon"><span>복사하기</span><i class="icon"
+                                                                         style="display: inline-block;width: 28px;height: 15px;background-image:url(img/icon_sms.png);background-size: cover;"></i>
+                            </button>
+                        </p>
+                        <p><span>가상계좌 : </span><strong>12312312312312</strong>
+                            <button class="btn_icon"><span>복사하기</span><i class="icon"
+                                                                         style="display: inline-block;width: 17px;height: 17px;background-image:url(img/icon_copy.png);background-size: cover;"></i>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <div class="box_money_wrap">
+                    <i class="icon-help _badge_right"></i>
+                    <div class="box_money">
+                        <button class="language_slt_wrap" disabled="disabled">
+                            <img src="img/korean.jpg" alt="태극기">
+                            <span class="_slt">KRW</span>
+                        </button>
+                        <em class="unit_wrap">
+                            <p class="_light_subtitle">보내는금액</p>
+                            <span class="unit_money">₩</span><span class="unit_num" contenteditable="true">1,000,000</span>
+                        </em>
+                    </div>
+                    <a class="send_link_wrap" href="#" data-alert="false">
+                        <p class="send_info_item">
+                            <span class="_title">
+                               송금인
+                            </span>
+                            <span class="_txt">
+                                김가은
+                            </span>
+                        <p class="send_info_item">
+                            <span class="_title">
+                               은행
+                            </span>
+                            <span class="_txt">
+                               국민은행
+                            </span>
+                        </p>
+                        <p class="send_info_item">
+                            <span class="_title">
+                               계좌번호
+                            </span>
+                            <span class="_txt">
+                              000-000000-000000
+                            </span>
+                        </p>
+                    </a>
+                    <a class="send_link_wrap" href="#" data-alert="true">
+                        <p class="send_info_item">
+                            <span class="_title">
+                               여권정보
+                            </span>
+                            <span class="_txt">
+                                AB1234567
+                            </span>
+                        </p>
+                    </a>
+                </div>
+            </article>
+            <article class="list_article">
+                <div class="box_money_wrap">
+                    <div class="box_money">
+                        <button class="language_slt_wrap">
+                            <img src="img/American.jpg" alt="미국국기">
+                            <span class="_slt">USA</span>
+                        </button>
+                        <em class="unit_wrap">
+                            <p class="_light_subtitle">받는금액</p>
+                            <span class="unit_money">$</span><span class="unit_num">854.34</span>
+                        </em>
+                    </div>
+                    <a class="send_link_wrap" href="#" data-alert="true">
+                        <p class="send_info_item">
+                            <span class="_title">
+                               이름
+                            </span>
+                            <span class="_txt">
+                                Birlay Chris (01.01.01)
+                            </span>
+                        <p class="send_info_item">
+                            <span class="_title">
+                               연락처
+                            </span>
+                            <span class="_txt">
+                               92-10-442-666
+                            </span>
+                        </p>
+                        <p class="send_info_item">
+                            <span class="_title">
+                               수취국가
+                            </span>
+                            <span class="_txt">
+                              Philippian 1 Account
+                            </span>
+                        </p>
+                        <p class="send_info_item">
+                            <span class="_title">
+                               은행
+                            </span>
+                            <span class="_txt">
+                              Bank of America
+                            </span>
+                        </p>
+                        <p class="send_info_item">
+                            <span class="_title">
+                               계좌
+                            </span>
+                            <span class="_txt">
+                              102-38102-1212
+                            </span>
+                        </p>
+                    </a>
+                </div>
+                <!--작은버튼 + txt글자가 같이 올 경우 start -->
+                <!--<div class="both_line">-->
+                    <!--<p class="help_large text_center">동일 정보로 송금 시 환율 및 수수료는<br>-->
+                        <!--현재 기준으로 갱신되어 제공 됩니다.-->
+                    <!--</p>-->
+                    <!--<div class="text_right">-->
+                        <!--<button class="btn_border btn_dark">동일 정보로 송금 하기</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--작은버튼 + txt글자가 같이 올 경우 end-->
+
+                <!--작은버튼 하나 올 경우 주석 풀기 start 밑줄 없을시 under_line를 삭제해주세요.-->
+                <div class="text_right under_line">
+                    <button class="btn_border btn_dark">동일 정보로 송금 하기</button>
+                </div>
+                <!--작은버튼 하나 올 시 주석 풀기 end-->
+                <div class="wrap_exchange">
+                    <dl class="list_exchange">
+                        <dt class="_title">
+                        <p class="_position"><span>환율</span><i class="icon-help"></i></p>
+                        <span class="help_rbltxt">10% 우대</span>
+                        </dt>
+                        <dd class="_content">
+                            <span class="unit_money">₩</span>
+                            <span class="unit_num">1,150,12</span>
+                        </dd>
+                    </dl>
+                    <dl class="list_exchange">
+                        <dt class="_title">
+                        <p class="_position"><span>수수료</span><i class="icon-help"></i></p>
+                        <span class="help_rbltxt">첫 송금 3천원 할인!!</span>
+                        </dt>
+                        <dd class="_content">
+                            <span class="unit_money">₩</span>
+                            <span class="unit_num">12,000</span>
+                        </dd>
+                    </dl>
+                    <!--help_rbltxt 위치가 unit위에 있을경우-->
+                    <!--<dl class="list_exchange">-->
+                    <!--<p class="help_rbltxt">첫 송금 3천원 할인!!</p>-->
+                    <!--<dt class="_title">-->
+                    <!--<span>수수료</span><i class="i_help">수수료정보</i>-->
+                    <!--</dt>-->
+                    <!--<dd class="_content">-->
+                    <!--<em class="unit_wrap only_unit">-->
+                    <!--<span class="unit_money">₩</span>-->
+                    <!--<span class="unit_num">100</span>-->
+                    <!--</em>-->
+                    <!--</dd>-->
+                    <!--</dl>-->
+                </div>
+            </article>
+            <!--<article class="only_btn_article">-->
+            <!--<button class="btn_block btn_danger" type="button">-->
+            <!--<span>송금하기</span>-->
+            <!--</button>-->
+            <!--<p class="help_btnblock_up">최종 송금 요청 시 환율은 변동될 수 있습니다.</p>-->
+            <!--</article>-->
+        </section>
+    </div>
+    <footer class="btn_area">
+        <div class="btn_wrap">
+            <div>
+                <button class="btn_block btn_danger" type="button">
+                    <span>송금취소</span>
+                </button>
+            </div>
+        </div>
+        <!--<p class="help_btnblock_up">최종 송금 요청 시 환율은 변동될 수 있습니다.</p>-->
+    </footer>
+</div>
+</body>
+
+</html>

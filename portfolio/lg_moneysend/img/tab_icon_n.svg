@@ -1,0 +1,19 @@
+<svg id="tab_icon_n.svg" xmlns="http://www.w3.org/2000/svg" width="29" height="79" viewBox="0 0 29 79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d0d0d0;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #f5f8fa;
+      }
+    </style>
+  </defs>
+  <path id="사각형_1_복사" data-name="사각형 1 복사" class="cls-1" d="M458,141l27,41-27,38h-2V141h2Z" transform="translate(-456 -141)"/>
+  <path id="사각형_1" data-name="사각형 1" class="cls-2" d="M456,141l27,41-27,38V141Z" transform="translate(-456 -141)"/>
+</svg>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>닫기버튼</span>
+            <i class="x_close"></i>
+        </button>
+        <h1 class="_title_center">아이디 찾기</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <div class="find_title">
+                    <div>
+                        <p class="_txt">아이디 찾기를 위해,회원 정보에<br>
+                            입력한 휴대폰번호를 입력해주세요.</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="_form_flex">
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" value="01012345678">
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                    </div>
+                    <div class="_form_flex">
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="인증번호 6자리">
+                                <span class="_time">2:00</span>
+                            </label>
+                            <button class="_delete"><i class="x_close_small"></i></button>
+                        </div>
+                        <div class="box_btn" style="width: 84px;">
+                            <button class="btn_dark" type="button">재전송</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <div>
+                        <button class="btn_block btn_danger" type="button" disabled="disabled">
+                            <span>아이디 찾기</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+</body>
+</html>
