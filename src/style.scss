@@ -92,13 +92,10 @@ button {
 // layout
 html {
     font-size: 62.5%;
-    height: 100%;
 }
 
 body {
     position: relative;
-    overflow: hidden;
-    height: 100%;
     margin: 0;
     padding: 0;
     color: $white;
@@ -114,29 +111,31 @@ body {
 
 // common
 [data-reactroot] {
-    overflow: hidden;
-    height: 100%;
-
     .content {
-        overflow-y: auto;
-        height: 100%;
+        min-height: 100vh;
 
         &.hasHeader {
-            height: calc(100% - #{$headerHeight});
+            padding-top: $headerHeight;
+            min-height: calc(100vh - #{$headerHeight});
         }
 
         &.hasFooter {
-            height: calc(100% - #{$footerHeight});
+            min-height: calc(100vh - #{$footerHeight});
             &.hasHeader {
-                height: calc(100% - #{$headerHeight + $footerHeight});
+                min-height: calc(100vh - #{$headerHeight + $footerHeight});
             }
         }
     }
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: $headerHeight;
     font-size: 2rem;
+    background: $black;
 
     > * {
         float: left;

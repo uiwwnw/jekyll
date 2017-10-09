@@ -1,7 +1,7 @@
 {
-  "name": "uiwwnw_react",
+  "name": "uiwwnw_portfolio",
   "version": "1.0.0",
-  "description": "https://github.com/uiwwnw/uiwwnw-react.git",
+  "description": "https://github.com/uiwwnw/uiwwnw.github.io",
   "main": "index.js",
   "scripts": {
     "start": "webpack --watch",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/uiwwnw/uiwwnw-react"
+    "url": "https://uiwwnw.github.io/"
   },
   "author": "",
   "license": "ISC",
