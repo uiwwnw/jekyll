@@ -23,7 +23,7 @@ class App extends React.Component {
         let footer;
         if (this.state.header) {
             header =
-                <Header navActive={this.state.navActive} content={this.state.content} onClick={this.toggleSidenav.bind(this)} onTab={this.changeTab.bind(this)} />;
+                <Header navActive={this.state.navActive} content={this.state.content} onClick={this.toggleSidenav.bind(this)} onTab={this.changeTab.bind(this)} menu={menu} />;
             contentClassName += ' hasHeader'
         }
         if (this.state.navActive) {

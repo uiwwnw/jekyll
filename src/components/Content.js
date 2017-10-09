@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from './Home';
 import Contact from './Contact';
-import ExPortfolio from './ExPortfolio';
 
 class Content extends React.Component {
     render() {
@@ -11,9 +10,6 @@ class Content extends React.Component {
         }
         if (this.props.content === 'Contact') {
             content = <Contact />
-        }
-        if (this.props.content === 'ExPortfolio') {
-            content = <ExPortfolio />
         }
         // for (var i = 0; i < this.props.menu.length; i++) {
         //     if (this.props.content == this.props.menu[i].name) {
