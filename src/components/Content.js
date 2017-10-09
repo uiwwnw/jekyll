@@ -18,7 +18,7 @@ class Content extends React.Component {
         //     }
         // }
         return (
-            <section className="content">
+            <section className={this.props.className}>
                 {content}
             </section>
         );

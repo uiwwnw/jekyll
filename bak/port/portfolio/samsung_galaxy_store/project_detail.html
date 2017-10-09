@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>galaxy store</title>
+
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="top">
+<div class="container-fluid">
+    <header>
+
+
+        <div class="row">
+            <div class="col-xs-2">
+                <!--<a href="#"><h1 class="logo green"><span>galaxy</span> <span>upcyling</span></h1></a>-->
+                <a href="#"><h1 class="logo green"><img src="img/logo.png" alt="galaxy upcyling"></h1></a>
+            </div>
+            <div class="col-xs-6">
+                <nav class="gnb">
+
+                    <!-- <a href="#"><h2 class="navMenu">home</h2></a> -->
+                    <!-- <a href="#"><h2 class="navMenu">getting started</h2></a> -->
+                    <a href="#"><h2 class="navMenu">dashboard</h2></a>
+                    <a href="#"><h2 class="navMenu">getting started</h2></a>
+                    <!-- <a href="#"><h2 class="navMenu">blog</h2></a> -->
+                    <!-- <a href="#"><h2 class="navMenu">about us</h2></a> -->
+                </nav>
+            </div>
+            <div class="col-xs-3 searchWrap">
+                <form class="searchBar" role="search" action="{% url 'dev:search' %}" method="get">
+                    <input id="searchKeyword" onkeyup="stoppedTyping()" type="search" name="q" class="form-control"
+                           placeholder="Search">
+                    <button id="searchButton" type="submit" class="btn btn-default" disabled style="display:none;">
+                        Search
+                    </button>
+                    <i class="glyphicon glyphicon-search"></i>
+                </form>
+            </div>
+            <div class="col-xs-1 dropWrap">
+                <div class="dropmenu green_type">
+                    <span class="frontTxt">darren</span>
+                    <div class="list">
+                        <a href="#">Profile</a>
+                        <a href="#">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="detailSection noNormal">
+        <article class="detailArticle noNormal">
+            <div class="row">
+                <div id="video_container" class="video_container">
+                    <video id="video" width="100%" poster="img/detail_sam.jpg">
+                    <source src="{{project.video.url}}" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                    </video>
+                    <div id="play_btn" onclick="playVideo();" class="play_btn"><input type="image" src="img/play.png"></div>
+                </div>
+                <div class="col-xs-7 paddingNone">
+
+                </div>
+                <div class="col-xs-5 paddingNone">
+                    <div class="detailCon">
+                        <h3 id="test1" class="detailTitle" data-num="0">Smart Battle Tank<span
+                                class="by">by Jangje</span></h3>
+                        <div class="detailItem">
+                            <p class="detailInTitle">DESCRIPTION</p>
+                            <p class="detailTxt">Various pheripheral on Galaxy make the tank battle more exting and
+                                creative </p>
+                            <button class="bookmark"><i class="bookmark"></i>RC</button>
+                            <button class="bookmark"><i class="bookmark"></i>Remote</button>
+                            <button class="bookmark"><i class="bookmark"></i>Battletank</button>
+                        </div>
+                        <div class="detailItem">
+                            <p class="detailInTitle">INFORMATION</p>
+                            <dl class="sideList">
+                                <dt>Update</dt>
+                                <dd>June 23, 2016, 9:36 PM</dd>
+                            </dl>
+                            <dl class="sideList">
+                                <dt>Views</dt>
+                                <dd><i class="glyphicon glyphicon-eye-open"></i>133</dd>
+                            </dl>
+                            <dl class="sideList">
+                                <dt>Recommendation</dt>
+                                <dd><i class="glyphicon glyphicon-thumbs-up"></i>37</dd>
+                            </dl>
+                        </div>
+                        <button class="yellow_btn"><span><i class="glyphicon glyphicon-cog"></i>Installation</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row paddingNone">
+                <div class="col-xs-7 paddingNone"></div>
+                <div class="col-xs-5 paddingNone">
+                    <div class="detailCon">
+                        <button class="blue_btn threeType"><span><i class="glyphicon glyphicon-edit"></i>Edit</span></button>
+                        <button class="orange_btn threeType"><span><i class="closed"></i>Delete</span></button>
+                        <button class="green_btn threeType"><span><i class="published"></i>Published</span></button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <i class="mc_visual"></i>
+    </section>
+    <section class="detailDSection noNormal">
+        <article class="detailDArticle noNormal">
+            <div class="detailDNav">
+                <dl class="lnblist active">
+                    <dt><a href="#test1" class="scroll">Smart battle Tank</a></dt>
+                    <dd style="display: none;"><a href="#"></a></dd>
+                </dl>
+                <dl class="lnblist">
+                    <dt><a href="#test2" class="scroll">Description</a></dt>
+                    <dd style="display: none;"><a href="#"></a></dd>
+                </dl>
+                <dl class="lnblist">
+                    <dt><a href="#test3" class="scroll">Things</a></dt>
+                    <dd style="display: none;"><a href="#"></a></dd>
+                </dl>
+                <dl class="lnblist">
+                    <dt><a href="#test4" class="scroll">Installantion</a></dt>
+                    <dd style="display: none;"><a href="#"></a></dd>
+                </dl>
+                <dl class="lnblist">
+                    <dt><a href="#test5" class="scroll">Draft</a></dt>
+                    <dd style="display: none;"><a href="#"></a></dd>
+                </dl>
+
+                <a href="#top" class="yellow_btn middleType scroll"><span><i class="glyphicon glyphicon-menu-up"></i>Go
+                    top</span></a>
+            </div>
+            <div class="detailDItem" data-num="1">
+                <h3 id="test2" class="detailDTitle"><a href="#">DESCRIPTION</a></h3>
+                <p class="detailDInTitle">Welcome to Smart Battle tank world!!!</p>
+                <p class="detailDSubTitle">You can play more exciting and creative battle with Galaxy</p>
+                <img src="img/detail_con1.jpg" alt="">
+                <dl class="detailList">
+                    <dt>Infra Red Cannon</dt>
+                    <dd>Infra Red Cannon will destory your enemy<br>
+                        Shot detecting sensor and Life indicator display remained life<br>
+                        Infra Red cannon make the tank battle possible
+                    </dd>
+                </dl>
+                <dl class="detailList">
+                    <dt>Real Time Front View Streaming over WIFI</dt>
+                    <dd>Galaxy Camera and WIFI makes you able to see the front area as first person narritive on real
+                        time <br>
+                        You and your friend can fight at the battle field where is out of your sight
+                    </dd>
+                </dl>
+                <dl class="detailList">
+                    <dt>Night LED Flash</dt>
+                    <dd>LED flash extend your battle field to night time and the place where have no lingt</dd>
+                </dl>
+                <dl class="detailList">
+                    <dt>Sensor Extension</dt>
+                    <dd>Various Sensor inside of Galaxy give you additional battle field information<br>
+                        Especially Magetic sensor give you the tank movement direction over wifi<br>
+                        IOIO inside of the tank afford extra pin which can be connected with other sensors<br>
+                        By adding aditional sensors, you can make your tank more intelligent in the <br>
+                        battle field
+                    </dd>
+                </dl>
+            </div>
+            <div class="detailDItem" data-num="2">
+                <h3 id="test3" class="detailDTitle"><a href="#">THINGS</a></h3>
+                <dl class="detailList">
+                    <dt>Hardware component</dt>
+                    <dd>· RC tank</dd>
+                    <dd>· IOIO : For connectiong RC tank with Galaxy and extended Sensors</dd>
+                    <dd>· OTG and USB cable</dd>
+                    <dd>· 3D printed linker module for Combining Galaxy to RC tank</dd>
+                    <dd>
+                        <img src="img/detail_con2.jpg" alt="">
+                    </dd>
+                    <dd>· Jumper Wires</dd>
+                </dl>
+            </div>
+            <div class="detailDItem" data-num="3">
+                <h3 id="test4" class="detailDTitle"><a href="#">INSTALLATION</a></h3>
+                <dl class="detailList">
+                    <dt>HW Module Setting</dt>
+                    <dd>1. Open the RC tank Tops : You need to remove the screw</dd>
+                    <dd>2. Connect RC tank driver IC control pins to IOIO by using jumper cables</dd>
+                    <dd>
+                        <img src="img/detail_con3.jpg" alt="">
+                    </dd>
+                    <dd>3. Right Foward/Backward, Left Forward/Backward</dd>
+                    <dd>4. Cannon Left/Right</dd>
+                    <dd>5. Cannon Shooting (IR Launching)</dd>
+                    <dd>6. Shot sensing</dd>
+                    <dd>7. Life indicating LED 1, 2, 3</dd>
+                    <dd>
+                        <img src="img/detail_con4.jpg" alt="">
+                    </dd>
+                    <dd>8. Arrange IOIO and cables properly</dd>
+                    <dd>9. Close the RC tank Tops</dd>
+                    <dd>10. Make the linker module by using 3D Printer</dd>
+                </dl>
+                <dl class="detailList">
+                    <dt>SW Installation</dt>
+                    <dd>1. Connecting Galaxy with PC</dd>
+                    <dd>2. Download the SW image by clicking the install button</dd>
+                </dl>
+                <dl class="detailList">
+                    <dt>Combining Galaxy with RC tank</dt>
+                    <dd>1. Combine the Galaxy with RC tank by using linker modue</dd>
+                    <dd>
+                        <img src="img/detail_con5.jpg" alt="">
+                    </dd>
+                </dl>
+            </div>
+            <div class="detailDItem" data-num="4">
+                <h3 id="test5" class="detailDTitle"><a href="#">DRAFT</a></h3>
+                <dl class="detailList">
+                    <dt>HW Module Setting</dt>
+                    <dd style="display: none;"></dd>
+            </div>
+        </article>
+    </section>
+    <section class="replySection">
+        <article class="replyArticle">
+            <div class="replayCon">
+                <div class="tabMenu">
+                    <button class="tab only1Active active">5 Comments</button>
+                    <button class="tab only1Active">Galaxy upcycle</button>
+                    <div class="sltWrap">
+                        <div class="dropmenu normal_type green_type">
+                            <span class="frontTxt">darren</span>
+                            <div class="list">
+                                <a href="#">Profile</a>
+                                <a href="#">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sortNShard">
+                    <button><i class="glyphicon glyphicon-thumbs-up"></i>Recommend</button>
+                    <button><i class="glyphicon glyphicon-share"></i>Share</button>
+                    <div class="sltWrap">
+                        <div class="dropmenu green_type">
+                            <span class="frontTxt">Share by Best</span>
+                            <div class="list">
+                                <a href="#">Profile</a>
+                                <a href="#">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="replayArea">
+                    <form>
+                        <label class="writeType">
+                            <span class="photo" style="background-image: url(img/face_sam.jpg)"></span>
+                            <span class="name">adwdf<span class="date">a month ago</span></span>
+                            <textarea class="reply" placeholder="내용을 입력 해주세요."></textarea>
+                            <button><i class="glyphicon glyphicon-menu-up"></i></button>
+                            <button><i class="glyphicon glyphicon-menu-down"></i></button>
+                            <a href="#">Reply</a>
+                            <a href="#">Share<i class="glyphicon glyphicon-menu-right"></i></a>
+                        </label>
+                        <label class="readType">
+                            <span class="photo"></span>
+                            <span class="name">adwdf<span class="date">a month ago</span></span>
+                            <p class="reply" placeholder="내용을 입력 해주세요.">우왕 JJ 퐈크 킹왕짱!!! ;)</p>
+                            <button><i class="glyphicon glyphicon-menu-up"></i></button>
+                            <button><i class="glyphicon glyphicon-menu-down"></i></button>
+                            <a href="#">Reply</a>
+                            <a href="#">Share<i class="glyphicon glyphicon-menu-right"></i></a>
+                        </label>
+                        <label class="readType">
+                            <span class="photo"></span>
+                            <span class="name">adwdf<span class="date">a month ago</span></span>
+                            <p class="reply" placeholder="내용을 입력 해주세요.">탱크가 너무 멋지네요. 국방색 탱크가 있다면 최고일 것 같아요.</p>
+                            <button><i class="glyphicon glyphicon-menu-up"></i></button>
+                            <button><i class="glyphicon glyphicon-menu-down"></i></button>
+                            <a href="#">Reply</a>
+                            <a href="#">Share<i class="glyphicon glyphicon-menu-right"></i></a>
+                        </label>
+                        <label class="readType">
+                            <span class="photo"></span>
+                            <span class="name">adwdf<span class="date">a month ago</span></span>
+                            <p class="reply" placeholder="내용을 입력 해주세요.">배틀탱크 멋져부러~ 추천 드리고 갑니다!</p>
+                            <button><i class="glyphicon glyphicon-menu-up"></i></button>
+                            <button><i class="glyphicon glyphicon-menu-down"></i></button>
+                            <a href="#">Reply</a>
+                            <a href="#">Share<i class="glyphicon glyphicon-menu-right"></i></a>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+    <footer>
+        <div>
+            <a href="#" class="footer_txt green">ABOUT US</a>
+            <a href="#" class="footer_txt green">BLOG</a>
+            <a href="#" class="footer_txt green">GETTING STARTED</a>
+            <a href="#" class="footer_txt green">DOCUMENTATION</a>
+            <a href="#" class="footer_txt green">STATUS</a>
+            <a href="#" class="footer_txt green">CONTACT</a>
+        </div>
+        <div>
+            <a href="#" class="footer_txt whiteGray">TERMS OF SERVICE</a>
+            <a href="#" class="footer_txt whiteGray">PRIVACY POLICY</a>
+        </div>
+        <img src="img/samsung_logo.png" class="footer_logo" alt="삼성">
+        <div>
+            <cite class="footer_sm_txt">ALL CONTENTS COPYRIGHT &copy; SAMSUNG ELECTRONICS CO., LTD.</cite>
+        </div>
+        <div>
+            <a href="#" class="footer_sm_txt whiteGray divide">samsung.com</a>
+            <a href="#" class="footer_sm_txt whiteGray divide">samsungmobilexpress.com </a>
+            <a href="#" class="footer_sm_txt whiteGray divide">samsung newsroom</a>
+            <a href="#" class="footer_sm_txt whiteGray divide">samung develeopers</a>
+            <a href="#" class="footer_sm_txt whiteGray divide">design samsung</a>
+        </div>
+    </footer>
+
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE 말줄임 js -->
+    <script src="lib/jQuery.dotdotdot/jquery.dotdotdot.min.js"></script>
+
+    <script>
+        // $(funtion(){
+
+        // });
+        $('.dropmenu').on({
+            "click": function () {
+                var th = $(this);
+                th.toggleClass('active');
+            },
+            "mouseleave":function () {
+                var th = $(this);
+                th.removeClass('active');
+            }
+        });
+
+        // IE 말줄임 //
+        // $(document).ready(function(){
+        //     $('.ellipsis-txt').dotdotdot();
+        // });
+
+
+        // lnb매뉴 온오프
+        $('.only1Active').on({
+            "click": function () {
+                var th = $(this),
+                        pa = th.parent();
+                pa.children().not(th).removeClass('active');
+                th.toggleClass('active');
+            }
+        });
+        function scrollD() {
+            // var html_scrollTop = $('html').scrollTop();
+            var body_scrollTop = $(window).scrollTop();
+            var target_offset = $("#test2").offset().top;
+            var test1 = $('#test1').offset().top;
+            // var        test2 = $('#test2').offset().top;
+            var test3 = $('#test3').offset().top;
+            var test4 = $('#test4').offset().top;
+            var test5 = $('#test5').offset().top;
+            var nav = $('.detailDNav');
+            if (body_scrollTop >= target_offset) {
+                nav.addClass('on');
+            } else {
+                nav.removeClass('on');
+            };
+            if (body_scrollTop + 98 + nav.height() >= $('.replySection').offset().top) {
+                nav.addClass('done')
+            } else {
+                nav.removeClass('done');
+            };
+            // console.log(body_scrollTop, target_offset)
+            // console.log(body_scrollTop , $('.replySection').offset().top , nav.height())
+            // console.log(body_scrollTop, test1, target_offset, test3, test4, test5);
+
+
+            if ((target_offset - 20) >= body_scrollTop) {
+                nav.children().removeClass('active');
+                nav.children().eq(0).addClass('active');
+            } else if ((test3 - 20) >= body_scrollTop) {
+                nav.children().removeClass('active');
+                nav.children().eq(1).addClass('active');
+            } else if ((test4 - 20) >= body_scrollTop) {
+                nav.children().removeClass('active');
+                nav.children().eq(2).addClass('active');
+            } else if ((test5 - 20) >= body_scrollTop){
+                nav.children().removeClass('active');
+                nav.children().eq(3).addClass('active');
+            } else if ((test5 - 20) < body_scrollTop){
+                nav.children().removeClass('active');
+                nav.children().eq(4).addClass('active');
+            };
+        }
+        $(function () {
+            // var win_w = $(window).width();
+            // win_h = $(window).height();
+            scrollD();
+
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 500);
+            });
+            $('body').click(function () {
+                // console.log($("#test2").offset().top)
+                // console.log($("body").scrollTop())
+            })
+            // $(window).resize(function () {
+                // win_w = $(window).width();
+                // win_h = $(window).height();
+            // })
+            $(window).scroll(function () {
+                scrollD();
+            })
+        })
+
+    </script>
+</body>
+</html>

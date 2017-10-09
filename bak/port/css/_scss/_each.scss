@@ -1,0 +1,28 @@
+
+
+$margin-: ('' -top -right -bottom -left);
+
+@each $value in $margin- {
+  .margin#{nth($value,1)} {
+    margin#{nth($value,1)}: $margin-m;
+  }
+  .padding#{nth($value,1)} {
+    padding#{nth($value,1)}: $margin-m;
+  }
+  @media screen and (max-width: $break-small) {
+    .margin#{nth($value,1)} {
+      margin#{nth($value,1)}: $margin-s;
+    }
+    .padding#{nth($value,1)} {
+      padding#{nth($value,1)}: $margin-s;
+    }
+  }
+  @media screen and (min-width: $break-large) {
+    .margin#{nth($value,1)} {
+      margin#{nth($value,1)} : $margin-l;
+    }
+    .padding#{nth($value,1)} {
+      padding#{nth($value,1)} : $margin-l;
+    }
+  }
+}

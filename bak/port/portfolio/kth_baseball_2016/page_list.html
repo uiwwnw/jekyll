@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 1106 -->
+    <link type="text/css" rel="stylesheet" href="guide.css" />
+    <title>page</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var pageList = document.getElementById("pageList").getElementsByTagName("li");
+
+            for (j = 0; j <= pageList.length; j++) {
+                if (pageList[j]) {
+                    var linkUrl = pageList[j].getElementsByTagName('a').item(1); //링크 텍스트를 가지고 있는 <a>
+                    var linkTxt = linkUrl.firstChild.nodeValue; //<a> 안에 있는 링크 주소 텍스트
+                    var linkTag = pageList[j].getElementsByTagName("a"); //<a>
+                    for (i = 0; i < linkTag.length; i++) {
+                        if (linkTag[i].className != 'direct') linkTag[i].href = ("html/" + linkTxt);
+                    };
+                } 
+            };
+        };
+    </script>
+    <style type="text/css">
+        html,
+        body,
+        ul,
+        li,
+        a,
+        strong,
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            font-weight: normal;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        .menu {
+            overflow: hidden;
+            border-bottom: 2px solid #1f262f;
+        }
+        
+        .menu > li {
+            display: table;
+            float: left;
+            width: 100%;
+            border-top: 2px solid #1f262f;
+        }
+        
+        .menu h2,
+        .menu h3 {
+            display: table-cell;
+            width: 140px;
+            padding: 10px 0 10px 10px;
+            background-color: #2e373f;
+            color: white;
+            vertical-align: top;
+        }
+        
+        .menu h3 {
+            padding: 10px 0 7px 10px;
+            background-color:
+        }
+        
+        .menu .depth {
+            display: table-cell;
+        }
+        
+        .menu .depth_inner {
+            display: table-cell;
+        }
+        
+        .menu .depth li {
+            display: table;
+            width: 100%;
+            min-height: 30px;
+            border-top: 1px solid #939393;
+        }
+        
+        .menu .depth li:first-child {
+            border-top: none;
+        }
+        
+        .menu .depth .tit_menu {
+            display: table-cell;
+            width: 200px;
+            padding: 0 10px;
+            line-height: 30px;
+        }
+        
+        .menu .depth .txt_link {
+            display: table-cell;
+            padding: 0 10px;
+        }
+        
+        .menu .psd {
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px solid #000;
+            color: blue;
+        }
+        
+        .menu .finish.new {
+            background: yellow;
+        }
+        
+        .menu .finish .link {
+            color: #ff0000;
+        }
+        
+        .menu .work_ing .link {
+            color: blue;
+            font-weight: bold
+        }
+        
+        .menu .finish .psd {
+            border-left: 1px solid #ff0000;
+        }
+        
+        .menu .work_ing .psd {
+            border-left: 1px solid blue;
+            color: blue;
+            font-weight: bold
+        }
+        
+        .menu .etc_txt {
+            display: inline-block;
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px solid #000;
+            text-decoration: underline;
+        }
+        
+        .menu .date_modify {
+            display: inline-block;
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px solid #000;
+            font-weight: bold
+        }
+        
+        .menu .date_modify:after {
+            content: "-수정";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Amoeba</h1>
+    </header>
+    <div class="body">
+        <ul id="pageList" class="menu">
+
+            <li>
+                <h2>오늘의 경기</h2>
+                <ul class="depth">
+                    <li>
+                        <h3>경기전</h3>
+                        <ul class="depth">
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">메뉴포커스</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_01(menufocus).html</a>
+                                </div>
+                            </li>
+
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_03(widgetfocus).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">경기예측 상세1</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_02(detail1).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">경기예측 상세2</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_02(detail2).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">경기예측 상세(문구1)</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_02(detail3).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">경기예측 상세(문구2)</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_02(detail4).html</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>경기중</h3>
+                        <ul class="depth">
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스1</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">channel(widgetfocus).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스2</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">channel(widgetfocus2).html</a>
+                                </div>
+                            </li>
+
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">채널이동</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">channel.html</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>경기후</h3>
+                        <ul class="depth">
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_01(widgetfocus).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">경기종료</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">today_02(finish).html</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">결합</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">merge_1.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">결합2</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">merge_2.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">결합2</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">merge_3.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">결합2</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">merge_4.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">오늘은 경기 없음</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">today_01(nogame).html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>트리거모드</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">원페이지2</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">triger_tag_onePage_type2.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>라이브중계</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">타자정보</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">live_03.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">투수정보</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">live_01.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">경기종료 팝업</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">live_04.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">경기종료</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">live_02.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>최소화 모드</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">최소화모드</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">minimize.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">최소화모드(경기취소)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">minimize_type1.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">최소화모드(경기종료)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">minimize_type2.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">최소화모드(경기예측)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">minimize_type3.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>포스트</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <h3>경기취소</h3>
+                        <ul class="depth">
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">포스트 포커스</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기취소).html</a>
+                                </div>
+                            </li>
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스1</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기취소)_unfocus.html</a>
+                                </div>
+                            </li>
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스2</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기취소)_unfocus2.html</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="finish">
+                        <h3>경기종료</h3>
+                        <ul class="depth">
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">포스트 포커스</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기종료).html</a>
+                                </div>
+                            </li>
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스1</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기종료)_unfocus.html</a>
+                                </div>
+                            </li>
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스2</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기종료)_unfocus2.html</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="finish">
+                        <h3>경기예측</h3>
+                        <ul class="depth">
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">포스트 포커스</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기예측).html</a>
+                                </div>
+                            </li>
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스1</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기예측)_unfocus.html</a>
+                                </div>
+                            </li>
+                            <li class="finish new">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스2</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">post_b(경기예측)_unfocus2.html</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>마이팀설정</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">메뉴포커스</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">myteam_01(menufocus).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">메뉴포커스_leave</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">myteam_01(menufocus)_leave.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">위젯포커스</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">myteam_02(widgetfocus).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">팝업</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">myteam_03(popup).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">팝업2</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">myteam_04(popup).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">팝업3</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">myteam_05(popup).html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>경기 예약 알람 팝업</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">투버튼</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">reservation_01(popup).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">원버튼</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">reservation_02(popup).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">버튼 없음</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">reservation_03(popup).html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li>
+                <h2>팀 순위</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">테이블형</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_02(table).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">테이블형</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_02(table2).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">테이블형</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_02(table3).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">테이블형(leave)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_02(table)_leave.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">그래프형 순위(디자인1)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_01(graph).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">그래프형 순위(디자인2)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_01(graph2)_leave.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">그래프형 순위(leave)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_01(graph)_leave.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">그래프형 타율</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_03(graph).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">그래프형 타율(focus leave)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_03(graph)_leave.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>투수순위</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">평균자책점</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_01(average).html</a>
+                        </div>
+                    </li>
+                       <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">평균자책점(focus leave)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_01(average)_leave.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">타율</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_02.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">타율(focus leave)</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">ranking_02_leave.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>팝업</h2>
+                <ul class="depth">
+                    <li>
+                        <h3>이벤트</h3>
+                        <ul class="depth">
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">이벤트1</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">popup(event1).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">이벤트2</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">popup(event2).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">이벤트3</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">popup(event3).html</a>
+                                </div>
+                            </li>
+                            <li class="finish">
+                                <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">이벤트4</a></strong>
+                                <div class="txt_link">
+                                    <a href="#" class="link" target="_blank">popup(event4).html</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">서버지연</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">delay(popup).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">서버지연</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">delay(popup_nobtn).html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">마이팀알림</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">popup_myteamNoti.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+             <li>
+                <h2>알림 문구 </h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">이벤트</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">bottom_alert_event.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">라이브 중계</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">bottom_alert_live.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">마이팀 설정</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">bottom_alert_myteam.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">투수 순위</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">bottom_alert_ranking1.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">타자 순위</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">bottom_alert_ranking2.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">팀기록</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">bottom_alert_teamscore.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">오늘의 경기</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">bottom_alert_today.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>이용안내</h2>
+                <ul class="depth">
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">안내1</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">tip01.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">안내2</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">tip02.html</a>
+                        </div>
+                    </li>
+                    <li class="finish">
+                        <strong class="tit_menu"><a href="#" class="link_tit" target="_blank">안내3</a></strong>
+                        <div class="txt_link">
+                            <a href="#" class="link" target="_blank">tip03.html</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,39 +1,61 @@
 import React from 'react';
 import Header from './Header';
 import Content from './Content';
-import menu from './menu';
 import Nav from './Nav';
+import Footer from './Footer';
+import menu from './menu';
 
 
 class App extends React.Component {
     constructor() {
         super(...arguments);
         this.state = {
-            nav: false,
+            header: true,
+            footer: true,
+            navActive: false,
             content: 'Home'
         };
     }
     render() {
+        let header;
         let nav;
-        if (this.state.nav) {
+        let contentClassName = 'content';
+        let footer;
+        if (this.state.header) {
+            header =
+                <Header navActive={this.state.navActive} content={this.state.content} onClick={this.toggleSidenav.bind(this)} onTab={this.changeTab.bind(this)} />;
+            contentClassName += ' hasHeader'
+        }
+        if (this.state.navActive) {
             nav =
                 <Nav onTab={this.changeTab.bind(this)} menu={menu} />
         }
+        if (this.state.footer) {
+            footer =
+                <Footer content={this.state.content} menu={menu}/>;
+            contentClassName += ' hasFooter'
+        }
         return (
             <main>
-                <Header nav={this.state.nav} content={this.state.content} onClick={this.toggleSidenav.bind(this)} onTab={this.changeTab.bind(this)} />
+                {header}
                 {nav}
-                <Content content={this.state.content} menu={menu}/>
+                <Content content={this.state.content} menu={menu} className={contentClassName}/>
+                {footer}
             </main>
         );
     }
     toggleSidenav() {
-        this.setState({ nav: !this.state.nav })
+        this.setState({ navActive: !this.state.navActive })
     }
     changeTab(e) {
-        var tabNum = e.target.getAttribute('data-tab-key');
+        var tabNum = Number(e.target.getAttribute('data-tab-key'));
+        // if (tabNum === menu[0].id) {
+        //     this.setState({
+        //         header: false
+        //     })
+        // }
         this.setState({
-            nav: false,
+            navActive: false,
             content: menu[tabNum].name
         })
     }

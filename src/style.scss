@@ -5,7 +5,7 @@
 @include sprites($spritesheet-sprites);
 
 $headerHeight: 8rem;
-$footerHeight: 4.4rem;
+$footerHeight: 3rem;
 
 
 $white: #fff;
@@ -116,9 +116,25 @@ body {
 [data-reactroot] {
     overflow: hidden;
     height: 100%;
+
+    .content {
+        overflow-y: auto;
+        height: 100%;
+
+        &.hasHeader {
+            height: calc(100% - #{$headerHeight});
+        }
+
+        &.hasFooter {
+            height: calc(100% - #{$footerHeight});
+            &.hasHeader {
+                height: calc(100% - #{$headerHeight + $footerHeight});
+            }
+        }
+    }
 }
 
-header {
+.header {
     height: $headerHeight;
     font-size: 2rem;
 
@@ -244,4 +260,9 @@ header {
         text-align: center;
         pointer-events: all;
     }
+}
+
+.footer {
+    text-align: center;
+    height: $footerHeight;
 }

@@ -4,7 +4,17 @@ class Contact extends React.Component {
     render() {
         return (
             <article>
-                contactcontactcontactcontactcontactcontactcontact
+                
+                adas<br/>
+                adas<br/>
+                adas<br/>
+                adas<br/>
+                adas<br/>
+                adas<br/>
+                adas<br/>
+                adas<br/>
+
+                adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>adas<br/>
             </article>
         );
     }

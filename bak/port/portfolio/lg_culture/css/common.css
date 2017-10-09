@@ -1,0 +1,30 @@
+@import "reset.css";
+@import "style.css";
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+/*반응형*/
+html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-size: 62.5%;
+    -webkit-text-size-adjust:none;
+}
+body {
+	width: 100%;
+	height: 100%;
+/*	min-width: 320px;*/
+	padding: 0;
+	margin: 0;
+    font-family:'Noto Sans', sans-serif;
+}
+@media (max-width:1440px){
+/*	html{font-size: 20%;}*/
+}
+
+header,
+footer,
+#container {
+	width: 100%;
+}

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Contact extends React.Component {
+class ExPortfolio extends React.Component {
     render() {
         return (
             <article>
-                asdkjalksdjlasdkjlasdjlaskjdlkasjdlaskdj
+                <iframe/>
             </article>
         );
     }
 }
 
-export default Contact;
+export default ExPortfolio;

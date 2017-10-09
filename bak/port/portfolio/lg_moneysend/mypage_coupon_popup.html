@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>햄버거메뉴아이콘</span>
+            <i class="icon-menu"></i>
+        </button>
+        <h1 class="_title_center">LG U+ 해외송금</h1>
+        <button class="_btn_right btn_icon" type="button">
+            <span>송금이력아이콘</span>
+            <i class="icon-send"></i>
+        </button>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <i class="icon-help"></i>
+                <div class="box_money_wrap">
+                    <div class="box_money">
+                        <button class="language_slt_wrap" disabled="disabled">
+                            <img src="img/korean.jpg" alt="태극기">
+                            <span class="_slt">KRW</span>
+                        </button>
+                        <em class="unit_wrap">
+                            <p class="">보내는금액</p>
+                            <span class="unit_money">₩</span><span class="unit_num" contenteditable="true">1,000,000</span>
+                        </em>
+                    </div>
+                    <div class="box_money">
+                        <button class="language_slt_wrap">
+                            <img src="img/American.jpg" alt="미국국기">
+                            <span class="_slt">USA</span>
+                        </button>
+                        <em class="unit_wrap">
+                            <p>받는금액</p>
+                            <span class="unit_money">$</span><span class="unit_num">854.34</span>
+                        </em>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="wrap_exchange">
+                    <dl class="list_exchange">
+                        <dt class="_title">
+                            <span class="_position">환율</span><i class="icon-help"></i>
+                            <span class="help_rbltxt">10% 우대</span>
+                        </dt>
+                        <dd class="_content">
+                            <span class="unit_money">₩</span>
+                            <span class="unit_num" contenteditable="true">1,150,12</span>
+                        </dd>
+                    </dl>
+                    <dl class="list_exchange">
+                        <dt class="_title">
+                            <span class="_position">수수료</span><i class="icon-help"></i>
+                            <span class="help_rbltxt">첫 송금 3천원 할인!!</span>
+                        </dt>
+                        <dd class="_content">
+                            <span class="unit_money">₩</span>
+                            <span class="unit_num">12,000</span>
+                        </dd>
+                    </dl>
+                    <!--help_rbltxt 위치가 unit위에 있을경우-->
+                    <!--<dl class="list_exchange">-->
+                    <!--<p class="help_rbltxt">첫 송금 3천원 할인!!</p>-->
+                    <!--<dt class="_title">-->
+                    <!--<span>수수료</span><i class="i_help">수수료정보</i>-->
+                    <!--</dt>-->
+                    <!--<dd class="_content">-->
+                    <!--<em class="unit_wrap">-->
+                    <!--<span class="unit_money">₩</span>-->
+                    <!--<span class="unit_num">100</span>-->
+                    <!--</em>-->
+                    <!--</dd>-->
+                    <!--</dl>-->
+                </div>
+            </article>
+            <article>
+                <button class="btn_block btn_danger" type="button">
+                    <span>송금하기</span>
+                </button>
+                <p class="help_btnblock_up">최종 송금 요청 시 환율은 변동될 수 있습니다.</p>
+            </article>
+        </section>
+        <!--<footer class="btn_area">-->
+        <!--<button class="btn_block btn_danger" type="button">-->
+        <!--<span>송금하기</span></button>-->
+        <!--</footer>-->
+        <!--<p class="help_btnblock_up">최종 송금 요청 시 환율은 변동될 수 있습니다.</p>-->
+
+    </div>
+
+</div>
+<div id="dialog" title="다운로드 1만 돌파" style="display:none;" class="has_close">
+    <div class="dialog_outer">
+        <div class="dialog_inner">
+            <!--<i class="icon-passport"></i>-->
+            <img src="img/lguplus_logo2.png" class="main_img" alt="lguplus logo">
+            <div class="coupon">
+                <p class="_info">다운로드 1만 돌파!</p>
+                <p class="_num">10% 할인</p>
+                <p class="_time">
+                    10% 할인
+                    <span class="_end">5일 남음</span>
+                </p>
+                <div class="_stick">
+                    <p class="_stick_txt">200,000원 이상 송금 시 사용가능</p>
+                </div>
+            </div>
+            <p class="notice_txt_small"><strong>사용 안내</strong></p>
+            <p class="notice_txt_small">환율 할인 쿠폰으로 수수료에는 적용 될 수 없습니다.
+                500,000,000원 이상 송금 시 사용이 가능합니다.
+                환율 10% 할인혜택을 받으실 수 있으며 최대
+                5000원까지 할인이 가능합니다. 사용 유효기간이
+                만료된 이후에는 사용하실 수 없습니다.
+                사용 안내 text
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#dialog").dialog({
+            draggable: false,
+            resizable: false,
+            height: "auto",
+            width: "calc(100% - 3rem)",
+            modal: true,
+//            buttons: {
+//                "SAVE": {
+//                    click: function () {
+//                        $(this).dialog("close");
+//                    },
+//                    text: '닫기',
+//                    class: 'btn_danger'
+//                },
+//                "Cancel": {
+//                    click: function () {
+//                        $(this).dialog("close");
+//                    },
+//                    text: '자세히 보기',
+//                    class: 'btn_gray'
+//                }
+//            }
+        });
+        if($("#dialog").hasClass('no_title')){
+            $(".ui-dialog-titlebar").addClass('no_title');
+        }
+        if($("#dialog").hasClass('has_close')){
+            $(".ui-dialog-titlebar").addClass('has_close')
+        }
+        if($("#dialog").hasClass('no_button')){
+            $(this).addClass('no_button')
+        }
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>뒤로가기버튼</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">쿠폰 함</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <button class="btn_block add_btn" type="button">
+                    <i class="icon-couponadd"></i>
+                    <span>쿠폰 등록</span>
+                </button>
+                <p class="notice_txt_small">보유 중인 쿠폰이 <span class="notice_txt_big">3</span>장 있습니다.</p>
+                <div class="coupon">
+                    <p class="_info">다운로드 1만 돌파!</p>
+                    <p class="_num">10% 할인</p>
+                    <p class="_time">
+                        16.11.12 까지
+                        <span class="_end">5일 남음</span>
+                    </p>
+                    <div class="_stick">
+                        <p class="_stick_txt">200,000원 이상 송금 시 사용가능</p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <p class="_info">다운로드 1만 돌파!</p>
+                    <p class="_num">10% 할인</p>
+                    <p class="_time">
+                        16.11.12 까지
+                        <span class="_end">4일 남음</span>
+                    </p>
+                    <div class="_stick">
+                        <p class="_stick_txt">200,000원 이상 송금 시 사용가능</p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <p class="_info">다운로드 1만 돌파!</p>
+                    <p class="_num">10% 할인</p>
+                    <p class="_time">
+                        16.11.12 까지
+                        <span class="_end">3일 남음</span>
+                    </p>
+                    <div class="_stick">
+                        <p class="_stick_txt">200,000원 이상 송금 시 사용가능</p>
+                    </div>
+                </div>
+                <div class="coupon" disabled="disabled">
+                    <p class="_info">다운로드 1만 돌파!</p>
+                    <p class="_num">10% 할인</p>
+                    <p class="_time">기간이 만료되었습니다.</p>
+                    <div class="_stick">
+                        <p class="_stick_txt">200,000원 이상 송금 시 사용가능</p>
+                        <button class="_end btn_small btn_default">기간만료</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+</body>
+</html>

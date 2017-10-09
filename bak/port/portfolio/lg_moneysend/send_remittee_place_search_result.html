@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area fullpop popup_num1">
+    <header class="title_area">
+        <button class="_btn_left btn_icon common-close" type="button" data-class="popup_num1">
+            <span>닫기버튼</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">지점 검색</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <div class="form">
+                    <div class="_form_flex">
+                        <div class="box_inp_wrap">
+                            <label class="box_inp">
+                                <input type="text" placeholder="지점 명을 입력하세요.">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="results_wrap" >
+                    <div class="accordion_wrap">
+                        <div class="_front ">
+                            <label class="_rdo_box normal-toggle-2">
+                                <input type="radio" name="country">
+                                <i class="_rdo"></i>
+                                <div class="_txt_item">
+                                    <p class="_title">지점명</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="_hidden">
+                            <div class="_work_time">
+                                <div class="_grid">
+                                    <div>
+                                        <p class="_grid_title">지점 주소</p>
+                                        <p class="_grid_txt">222 Broadway New York,NY 10038</p>
+                                    </div>
+                                    <div>
+                                        <p class="_grid_title">영업 시간</p>
+                                        <div class="_grid">
+                                            <p class="_grid_title">TUE<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                            <p class="_grid_title">WED<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                            <p class="_grid_title">THU - SAT<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                            <p class="_grid_title">SUN<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion_wrap">
+                        <div class="_front ">
+                            <label class="_rdo_box normal-toggle-2">
+                                <input type="radio" name="country">
+                                <i class="_rdo"></i>
+                                <div class="_txt_item">
+                                    <p class="_title">지점명</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="_hidden">
+                            <div class="_work_time">
+                                <div class="_grid">
+                                    <div>
+                                        <p class="_grid_title">지점 주소</p>
+                                        <p class="_grid_txt">222 Broadway New York,NY 10038</p>
+                                    </div>
+                                    <div>
+                                        <p class="_grid_title">영업 시간</p>
+                                        <div class="_grid">
+                                            <p class="_grid_title">TUE<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                            <p class="_grid_title">WED<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                            <p class="_grid_title">THU - SAT<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                            <p class="_grid_title">SUN<span class="_grid_time">오전 7:30 ~ 오후 9:30</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="btn_block btn_danger" type="button">
+                    <span>확인</span>
+                </button>
+            </article>
+        </section>
+    </div>
+</div>
+<button class="btn_block btn_dark common-view" data-class="popup_num1">
+    <span>full popup open</span>
+</button>
+</body>
+</html>

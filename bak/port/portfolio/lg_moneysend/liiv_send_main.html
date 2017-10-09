@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article class="bg_article">
+                <button class="liiv_btn_icon left" type="button">
+                    <span>햄버거메뉴아이콘</span>
+                    <i class="icon-menu"></i>
+                </button>
+                <button class="liiv_btn_icon right" type="button">
+                    <span>송금이력아이콘</span>
+                    <i class="icon-exchange_rate has_badge">
+                        <em class="badge_icon"></em>
+                    </i>
+                </button>
+                <div class="box_money_wrap main_center">
+                    <i class="icon-help _badge_right"></i>
+                    <div class="box_money">
+                        <button class="language_slt_wrap" disabled="disabled">
+                            <img src="img/korean.jpg" alt="태극기">
+                            <span class="_slt">KRW</span>
+                        </button>
+                        <em class="unit_wrap">
+                            <p class="">보내는금액</p>
+                            <span class="unit_money">₩</span><span class="unit_num" contenteditable="true">1,000,000</span>
+                        </em>
+                    </div>
+                    <div class="box_money">
+                        <button class="language_slt_wrap">
+                            <img src="img/American.jpg" alt="미국국기">
+                            <span class="_slt">USA</span>
+                        </button>
+                        <em class="unit_wrap">
+                            <p>받는금액</p>
+                            <span class="unit_money">$</span><span class="unit_num">854.34</span>
+                        </em>
+                    </div>
+                </div>
+                <div class="wrap_exchange">
+                    <dl class="list_exchange">
+                        <dt class="_title">
+                        <p class="_position"><span>환율</span><i class="icon-help"></i></p>
+                        <span class="help_rbltxt">10% 우대</span>
+                        </dt>
+                        <dd class="_content">
+                            <span class="unit_money">₩</span>
+                            <span class="unit_num">1,150,12</span>
+                        </dd>
+                    </dl>
+                    <dl class="list_exchange">
+                        <dt class="_title">
+                        <p class="_position"><span>수수료</span><i class="icon-help"></i></p>
+                        <span class="help_rbltxt">첫 송금 3천원 할인!!</span>
+                        </dt>
+                        <dd class="_content">
+                            <span class="unit_money">₩</span>
+                            <span class="unit_num">12,000</span>
+                        </dd>
+                    </dl>
+                    <!--help_rbltxt 위치가 unit위에 있을경우-->
+                    <!--<dl class="list_exchange">-->
+                    <!--<p class="help_rbltxt">첫 송금 3천원 할인!!</p>-->
+                    <!--<dt class="_title">-->
+                    <!--<span>수수료</span><i class="i_help">수수료정보</i>-->
+                    <!--</dt>-->
+                    <!--<dd class="_content">-->
+                    <!--<em class="unit_wrap">-->
+                    <!--<span class="unit_money">₩</span>-->
+                    <!--<span class="unit_num">100</span>-->
+                    <!--</em>-->
+                    <!--</dd>-->
+                    <!--</dl>-->
+                </div>
+                <div class="btn_wrap">
+                    <div>
+                        <button class="btn_block btn_danger" type="button">
+                            <span>송금하기</span>
+                        </button>
+                    </div>
+                </div>
+                <p class="help_large text_center">최종 송금 요청 시 환율은 변동될 수 있습니다.</p>
+                <img src="img/send_main.jpg" style="width:100% ; margin:35px 0" alt="송금하기 조회하기 이미지">
+            </article>
+            <article class="full_article">
+                <div class="company_wrap">
+                    <p class="_company_txt"><span>서울특별시 용산구 한강로3가 65-228</span> LG유플러스</p>
+                    <p class="_company_txt"><span>이용약관</span><span>개인정보처리방침</span></p>
+                    <p class="_company_txt"><span>&copy LG Crop.</span><span>고객센터 : 1544-0010</span></p>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+</body>
+
+</html>
+                <!--<p class="help_large text_center">최종 송금 요청 시 환율은 변동될 수 있습니다.</p>-->
+                <!--<img src="img/send_main.jpg" width="100%" alt="">-->
+            <!--</article>-->
+            <!--<article class="full_article">-->
+                <!--<div class="company_wrap">-->
+                    <!--<p class="_company_txt"><span>서울특별시 용산구 한강로3가 65-228</span> LG유플러스</p>-->
+                    <!--<p class="_company_txt"><span>이용약관</span><span>개인정보처리방침</span></p>-->
+                    <!--<p class="_company_txt"><span>&copy LG Crop.</span><span>고객센터 : 1544-0010</span></p>-->
+                <!--</div>-->
+            <!--</article>-->
+        <!--</section>-->
+    <!--</div>-->
+    <!--<footer class="btn_area">-->
+        <!--<div class="btn_wrap">-->
+            <!--<div>-->
+                <!--<button class="btn_block btn_danger" type="button">-->
+                    <!--<span>송금하기</span>-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<p class="help_btnblock_up">최종 송금 요청 시 환율은 변동될 수 있습니다.</p>&ndash;&gt;-->
+    <!--</footer>-->
+<!--</div>-->
+<!--</body>-->
+
+<!--</html>-->

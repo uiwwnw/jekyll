@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/_style/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>뒤로가기 버튼</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">1:1 문의 내역</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article class="full_article">
+                <div class="faq_tab_menu">
+                    <div style="width:50%">
+                        <button class="tab_title on tab-on-2">
+                            <span>1:1문의</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="tab_title tab-on-2">
+                            <span>1:1 문의 내역</span>
+                        </button>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </article>
+            <article class="only_btn_article">
+                <p class="notice_txt">문의/불편 접수의 특성상, 부득이 답변 처리가
+                    지연될 수 있음을 양해 바랍니다.</p>
+                <div class="qna_wrap">
+                    <div class="qna_type">
+                        <strong class="_sort">[문의유형]</strong><span class="_time">16.12.01</span>
+                        <button class="btn_small btn_default" data-click="false"><span>기간만료</span></button>
+                    </div>
+                    <button class="qna_acord normal-toggle-1">
+                        <p class="_title">송금 시 자꾸 오류가 발생해요</p>
+                        <p class="_txt">캡쳐 사진 첨부합니다. 자꾸 오류가 발생하네요.
+                            아이폰 6구요. 버전은 최신 버전입니다.
+                            확인 부탁드려요.</p>
+                        <i class="down_arrow_small"></i>
+                    </button>
+                    <div class="qna_acord_hide">
+                        <p class="_title">
+                            <img src="img/q.png" alt="질문" width="27">
+                            <span>송금 시 자꾸 오류가 발생해요</span>
+                        </p>
+                        <p class="_txt _not_ellipsis">캡쳐 사진 첨부합니다. 자꾸 오류가 발생하네요.
+                            아이폰 6구요. 버전은 최신 버전입니다.
+                            확인 부탁드려요.</p>
+                    </div>
+                    <div class="qna_acord_hide">
+                        <p class="_title">
+                            <img src="img/orange_a.png" alt="답변" width="27">
+                            <span>안녕하세요 답변내용기재</span>
+                        </p>
+                        <p class="_txt _not_ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                            aspernatur culpa reiciendis. Accusamus aliquam assumenda eaque est, eum ex iste molestiae
+                            nemo nostrum odio odit praesentium provident rem repellat totam?</p>
+                        <p class="_time">
+                            16.12.01 오후 7:13
+                        </p>
+                    </div>
+                </div>
+                <div class="qna_wrap">
+                    <div class="qna_type">
+                        <strong class="_sort">[조회/송금]</strong><span class="_time">16.12.01</span>
+                        <button class="btn_small btn_danger" data-click="true"><span>답변완료</span></button>
+                    </div>
+                    <button class="qna_acord normal-toggle-1">
+                        <p class="_title">송금 시 자꾸 오류가 발생해요</p>
+                        <p class="_txt">캡쳐 사진 첨부합니다. 자꾸 오류가 발생하네요.
+                            아이폰 6구요. 버전은 최신 버전입니다.
+                            확인 부탁드려요.</p>
+                        <i class="down_arrow_small"></i>
+                    </button>
+                    <div class="qna_acord_hide">
+                        <p class="_title">
+                            <img src="img/q.png" alt="질문" width="27">
+                            <span>송금 시 자꾸 오류가 발생해요</span>
+                        </p>
+                        <p class="_txt _not_ellipsis">캡쳐 사진 첨부합니다. 자꾸 오류가 발생하네요.
+                            아이폰 6구요. 버전은 최신 버전입니다.
+                            확인 부탁드려요.</p>
+                    </div>
+                    <div class="qna_acord_hide">
+                        <p class="_title">
+                            <img src="img/orange_a.png" alt="답변" width="27">
+                            <span>안녕하세요 답변내용기재</span>
+                        </p>
+                        <p class="_txt _not_ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                            aspernatur culpa reiciendis. Accusamus aliquam assumenda eaque est, eum ex iste molestiae
+                            nemo nostrum odio odit praesentium provident rem repellat totam?</p>
+                        <p class="_time">
+                            16.12.01 오후 7:13
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!--<article>-->
+            <!--<button class="btn_block btn_danger" type="button">-->
+            <!--<span>문의 등록</span>-->
+            <!--</button>-->
+            <!--</article>-->
+            <article>
+                <!--<div class="help_txt_wrap">-->
+                <!--<dl class="_help_txt">-->
+                <!--<dt class="_title">Guide Text</dt>-->
+                <!--<dd class="_txt list_style" data-ls="-">text<br>text-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--<dl class="_help_txt">-->
+                <!--<dt class="_title">Guide Text</dt>-->
+                <!--<dd class="_txt list_style" data-ls="-">text</dd>-->
+                <!--<dd class="_txt list_style" data-ls="-">text</dd>-->
+                <!--</dl>-->
+                <!--</div>-->
+            </article>
+        </section>
+    </div>
+</div>
+</body>
+
+</html>
