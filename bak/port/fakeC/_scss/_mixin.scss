@@ -1,0 +1,68 @@
+@mixin shadow($insert:false,$x:0,$y:0,$blur:8,$spacing:1,$opacity:0.3,$important:false) {
+  $x11: $x + px;
+  $x22: $y + px;
+  $x33: $blur + px;
+  $x44: $spacing + px;
+  $x55: $opacity;
+  @if ($insert) {
+    box-shadow: insert $x11 $x22 $x33 $x44 rgba(0, 0, 0, $x55);
+  } @else {
+    box-shadow: $x11 $x22 $x33 $x44 rgba(0, 0, 0, $x55);
+  }
+  @if ($important) {
+    @if ($insert) {
+      box-shadow: insert $x11 $x22 $x33 $x44 rgba(0, 0, 0, $x55) !important;
+    } @else {
+      box-shadow: $x11 $x22 $x33 $x44 rgba(0, 0, 0, $x55) !important;
+    }
+  }
+}
+
+@mixin transition($a:all,$time:0.3,$type:ease,$important : false) {
+  $bb: #{$time}s;
+  transition: $a $bb $type;
+  @if ($important) {
+    transition: $a $bb $type !important;
+  }
+}
+
+@mixin color-opacity($color,$amount:1) {
+  color: transparentize($color, $amount);
+}
+
+@mixin hover($color, $amount:18) {
+  @include transition();
+  &:hover {
+    @if (lightness($color) > 50) {
+      color: darken($color, $amount)
+    } @else {
+      color: lighten($color, $amount);
+    }
+  }
+  &:active {
+    $amount2: $amount + 24;
+    @if (lightness($color) > 50) {
+      color: darken($color, $amount2)
+    } @else {
+      color: lighten($color, $amount2);
+    }
+  }
+}
+@mixin hover-bg($color, $amount:18) {
+  @include transition();
+  &:hover {
+    @if (lightness($color) > 50) {
+      background: darken($color, $amount)
+    } @else {
+      background: lighten($color, $amount);
+    }
+  }
+  &:active {
+    $amount2: $amount + 24;
+    @if (lightness($color) > 50) {
+      background: darken($color, $amount2)
+    } @else {
+      background: lighten($color, $amount2);
+    }
+  }
+}

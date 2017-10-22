@@ -1,0 +1,70 @@
+﻿html, body {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+$text: txt;
+//$size-1: 100px;
+$size-l1: 22px;
+$size-l2: 20px;
+$size-l3: 18px;
+$size-l4: 16px;
+$size-l5: 14px;
+$size-l6: 12px;
+
+$size-m1: 24px;
+$size-m2: 22px;
+$size-m3: 20px;
+$size-m4: 18px;
+$size-m5: 16px;
+$size-m6: 14px;
+
+$size-s1: 26px;
+$size-s2: 24px;
+$size-s3: 22px;
+$size-s4: 20px;
+$size-s5: 18px;
+$size-s6: 16px;
+
+$font-list: (
+        h1 $text $size-l1 $size-m1 $size-s1,
+        h2 $text $size-l2 $size-m2 $size-s2,
+        h3 $text $size-l3 $size-m3 $size-s3,
+        h4 $text $size-l4 $size-m4 $size-s4,
+        h5 $text $size-l5 $size-m5 $size-s5,
+        h6 $text $size-l6 $size-m6 $size-s6,
+);
+
+@each $value in $font-list {
+  #{nth($value,1)},
+  .#{nth($value,1)}-#{nth($value,2)} {
+    font-size: nth($value, 4);
+  }
+  @media screen and (max-width: $break-small) {
+    #{nth($value,1)},
+    .#{nth($value,1)}-#{nth($value,2)} {
+      font-size: nth($value, 5);
+    }
+  }
+  @media screen and (min-width: $break-large) {
+    #{nth($value,1)},
+    .#{nth($value,1)}-#{nth($value,2)} {
+      font-size: nth($value, 3);
+    }
+  }
+}
+
+$font-weight: fw;
+$font-weight-list: (
+        $font-weight 'b' 700,
+        $font-weight 'm' 500,
+        $font-weight 'n' 400,
+        $font-weight 'l' 100,
+);
+@each $value in $font-weight-list {
+  .#{nth($value,1)}#{nth($value,2)} {
+    font-weight: nth($value, 3);
+  }
+}
