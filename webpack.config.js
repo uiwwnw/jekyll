@@ -38,25 +38,31 @@ var config = {
                     }
                 }]
             }
-            , {
-                test: /\.png$/,
-                loaders: [
-                    'file-loader?name=./dist/img/[hash].[ext]'
-                ]
-            }
-            , {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    cacheDirectory: true,
-                    presets: ['es2015', 'react']
-                }
-            }
-            , {
-                test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-                loader: 'url-loader?name=./dist/img/[hash].[ext]'
-            }
+            // , {
+            //     test: /\.jpg$/,
+            //     loaders: [
+            //         'file-loader?name=./dist/img/[hash].[ext]'
+            //     ]
+            // }
+            // , {
+            //     test: /\.png$/,
+            //     loaders: [
+            //         'file-loader?name=./dist/img/[hash].[ext]'
+            //     ]
+            // }
+            // , {
+            //     test: /\.js$/,
+            //     loader: 'babel-loader',
+            //     exclude: /node_modules/,
+            //     query: {
+            //         cacheDirectory: true,
+            //         presets: ['es2015', 'react']
+            //     }
+            // }
+            // , {
+            //     test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+            //     loader: 'url-loader?name=./dist/font/[hash].[ext]'
+            // }
         ]
     },
     resolve: {
@@ -79,6 +85,18 @@ var config = {
                 cssImageRef: './spritesmith-generated/sprite.png'
             }
         })
+        , {
+            test: /\.jpg$/,
+            loaders: [
+                'file-loader?name=./dist/img/[hash].[ext]'
+            ]
+        }
+        , {
+            test: /\.png$/,
+            loaders: [
+                'file-loader?name=./dist/img/[hash].[ext]'
+            ]
+        }
         , extractSass
     ]
 

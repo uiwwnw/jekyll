@@ -31,28 +31,6 @@ $facebook-total-width: 446px;
 $facebook-total-height: 297px;
 $facebook-image: './spritesmith-generated/sprite.png';
 $facebook: (298px, 0px, -298px, 0px, 148px, 149px, 446px, 297px, './spritesmith-generated/sprite.png', 'facebook', );
-$kakao-name: 'kakao';
-$kakao-x: 149px;
-$kakao-y: 149px;
-$kakao-offset-x: -149px;
-$kakao-offset-y: -149px;
-$kakao-width: 149px;
-$kakao-height: 148px;
-$kakao-total-width: 446px;
-$kakao-total-height: 297px;
-$kakao-image: './spritesmith-generated/sprite.png';
-$kakao: (149px, 149px, -149px, -149px, 149px, 148px, 446px, 297px, './spritesmith-generated/sprite.png', 'kakao', );
-$line-name: 'line';
-$line-x: 298px;
-$line-y: 149px;
-$line-offset-x: -298px;
-$line-offset-y: -149px;
-$line-width: 148px;
-$line-height: 148px;
-$line-total-width: 446px;
-$line-total-height: 297px;
-$line-image: './spritesmith-generated/sprite.png';
-$line: (298px, 149px, -298px, -149px, 148px, 148px, 446px, 297px, './spritesmith-generated/sprite.png', 'line', );
 $mail-name: 'mail';
 $mail-x: 0px;
 $mail-y: 0px;
@@ -78,7 +56,7 @@ $twitter: (149px, 0px, -149px, 0px, 149px, 149px, 446px, 297px, './spritesmith-g
 $spritesheet-width: 446px;
 $spritesheet-height: 297px;
 $spritesheet-image: './spritesmith-generated/sprite.png';
-$spritesheet-sprites: ($daum, $facebook, $kakao, $line, $mail, $twitter, );
+$spritesheet-sprites: ($daum, $facebook, $mail, $twitter, );
 $spritesheet: (446px, 297px, './spritesmith-generated/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
