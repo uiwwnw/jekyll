@@ -17,6 +17,11 @@ let list = [
     {
         'done': true,
         'time': '2018/01/21',
+        'text': '리엑트 깃블로그 0.2.1 release'
+    },
+    {
+        'done': true,
+        'time': '2018/01/21',
         'text': '리엑트 깃블로그 0.2.0 release'
     },
     {

@@ -5,6 +5,7 @@
 $headerHeight: 8rem;
 $footerHeight: 3rem;
 $fontSizeNormal: 1.2rem;
+$fontFamily: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
 $white: #fff;
 $gray: #ededed;
@@ -75,7 +76,12 @@ button {
     @extend %act;
     padding: 0;
     border: 0;
+    font-family: $fontFamily;
     background: none;
+}
+
+input {
+    font-family: $fontFamily;
 }
 
 // layout
@@ -88,7 +94,8 @@ body {
     margin: 0;
     padding: 0;
     color: $white;
-    font-size: 1.2rem;
+    font-family: $fontFamily;
+    font-size: $fontSizeNormal;
     background-color: $bg;
     > div {
         height: 100%;
@@ -281,7 +288,7 @@ body {
 
 .logList {
     margin-bottom: 0;
-    
+
     span {
         margin-right: .5rem;
         color: rgba(255, 255, 255, .3);
