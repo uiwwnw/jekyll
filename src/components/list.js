@@ -5,6 +5,7 @@ const noinput = '날짜미기입';
 let list = [
     {
         'text': '낱말게임 프로그램 제작',
+        'link': 'https://github.com/uiwwnw/v_wordgame',
         'time': incomplete
     },
     {

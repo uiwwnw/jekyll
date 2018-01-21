@@ -57,7 +57,7 @@ class Done extends React.Component {
             <ul className="logList">
                 {
                     filtered.map(
-                        (item, idx) => <Item key={idx} text={item.text} time={item.time} />
+                        (item, idx) => <Item key={idx} text={item.text} time={item.time} link={item.link} />
                     )
                 }
             </ul>
@@ -74,7 +74,7 @@ class Todo extends React.Component {
             <ul className="logList">
                 {
                     filtered.map(
-                        (item, idx) => <Item key={idx} text={item.text} time={item.time} />
+                        (item, idx) => <Item key={idx} text={item.text} time={item.time} link={item.link} />
                     )
                 }
             </ul>
@@ -84,7 +84,7 @@ class Todo extends React.Component {
 
 class Item extends React.Component {
     render() {
-        return <li key={this.props.idx}><span>{this.props.time}</span>{this.props.text}</li>
+        return <li key={this.props.idx}><span>{this.props.time}</span>{this.props.text}{this.props.link === undefined?'':<a target="_blank" href={this.props.link}>{this.props.link}</a>}</li>
     }
 }
 
