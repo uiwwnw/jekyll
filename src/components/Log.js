@@ -41,7 +41,7 @@ class Result extends React.Component {
             <div>
                 <h3><i className="icon-check"></i>Done</h3>
                 <Done filterText={this.props.filterText} list={list} />
-                <h3><i className="icon-check-empty-1"></i>Todo</h3>
+                <h3><i className="icon-check-empty"></i>Todo</h3>
                 <Todo filterText={this.props.filterText} list={list} />
             </div>
         )

@@ -10688,7 +10688,7 @@ var Result = function (_React$Component3) {
                 _react2.default.createElement(
                     'h3',
                     null,
-                    _react2.default.createElement('i', { className: 'icon-check-empty-1' }),
+                    _react2.default.createElement('i', { className: 'icon-check-empty' }),
                     'Todo'
                 ),
                 _react2.default.createElement(Todo, { filterText: this.props.filterText, list: _list2.default })
