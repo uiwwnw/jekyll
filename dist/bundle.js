@@ -10714,13 +10714,13 @@ var Done = function (_React$Component4) {
             var _this5 = this;
 
             var filtered = this.props.list.filter(function (item) {
-                return item.done === true && item.text.indexOf(_this5.props.filterText) !== -1;
+                return item.done === true && (item.text.indexOf(_this5.props.filterText) !== -1 || item.time.indexOf(_this5.props.filterText) !== -1);
             });
             return _react2.default.createElement(
                 'ul',
                 { className: 'logList' },
                 filtered.map(function (item, idx) {
-                    return _react2.default.createElement(Item, { key: idx, text: item.text, time: item.time ? item.time : '미정' });
+                    return _react2.default.createElement(Item, { key: idx, text: item.text, time: item.time });
                 })
             );
         }
@@ -10744,13 +10744,13 @@ var Todo = function (_React$Component5) {
             var _this7 = this;
 
             var filtered = this.props.list.filter(function (item) {
-                return item.done !== true && item.text.indexOf(_this7.props.filterText) !== -1;
+                return item.done !== true && (item.text.indexOf(_this7.props.filterText) !== -1 || item.time.indexOf(_this7.props.filterText) !== -1);
             });
             return _react2.default.createElement(
                 'ul',
                 { className: 'logList' },
                 filtered.map(function (item, idx) {
-                    return _react2.default.createElement(Item, { key: idx, text: item.text, time: item.time ? item.time : '미정' });
+                    return _react2.default.createElement(Item, { key: idx, text: item.text, time: item.time });
                 })
             );
         }
@@ -10879,12 +10879,18 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var incomplete = '미완성';
+var noinput = '날짜미기입';
+
 var list = [{
-    'text': '낱말게임 프로그램 제작'
+    'text': '낱말게임 프로그램 제작',
+    'time': incomplete
 }, {
-    'text': '리액트 깃블로그 홈탭 보안'
+    'text': '리액트 깃블로그 홈탭 보안',
+    'time': incomplete
 }, {
-    'text': '리액트 깃블로그 스프라이트 기능 적용(구현된 부분 실 적용)'
+    'text': '리액트 깃블로그 스프라이트 기능 적용(구현된 부분 실 적용)',
+    'time': incomplete
 }, {
     'done': true,
     'time': '2018/01/21',
@@ -10903,6 +10909,7 @@ var list = [{
     'text': '리엑트 깃블로그 0.1.0 release'
 }, {
     'done': true,
+    'time': noinput,
     'text': 'WAI-ARIA 스터디'
 }, {
     'done': true,

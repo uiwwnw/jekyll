@@ -1,14 +1,19 @@
 import React from 'react';
+const incomplete = '미완성';
+const noinput = '날짜미기입';
 
 let list = [
     {
-        'text': '낱말게임 프로그램 제작'
+        'text': '낱말게임 프로그램 제작',
+        'time': incomplete
     },
     {
-        'text': '리액트 깃블로그 홈탭 보안'
+        'text': '리액트 깃블로그 홈탭 보안',
+        'time': incomplete
     },
     {
-        'text': '리액트 깃블로그 스프라이트 기능 적용(구현된 부분 실 적용)'
+        'text': '리액트 깃블로그 스프라이트 기능 적용(구현된 부분 실 적용)',
+        'time': incomplete
     },
 
 
@@ -36,6 +41,7 @@ let list = [
     },
     { 
         'done': true,
+        'time': noinput,
         'text': 'WAI-ARIA 스터디' 
     },
     { 

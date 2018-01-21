@@ -51,13 +51,13 @@ class Result extends React.Component {
 class Done extends React.Component {
     render() {
         let filtered = this.props.list.filter(
-          (item) => item.done === true && item.text.indexOf(this.props.filterText) !== -1  
+          (item) => item.done === true && (item.text.indexOf(this.props.filterText) !== -1 || item.time.indexOf(this.props.filterText) !== -1)
         );
         return (
             <ul className="logList">
                 {
                     filtered.map(
-                        (item, idx) => <Item key={idx} text={item.text} time={item.time?item.time:'미정'} />
+                        (item, idx) => <Item key={idx} text={item.text} time={item.time} />
                     )
                 }
             </ul>
@@ -68,13 +68,13 @@ class Done extends React.Component {
 class Todo extends React.Component {
     render() {
         let filtered = this.props.list.filter(
-          (item) => item.done !== true && item.text.indexOf(this.props.filterText) !== -1
+            (item) => item.done !== true && (item.text.indexOf(this.props.filterText) !== -1 || item.time.indexOf(this.props.filterText) !== -1)
         );
         return (
             <ul className="logList">
                 {
                     filtered.map(
-                        (item, idx) => <Item key={idx} text={item.text} time={item.time?item.time:'미정'} />
+                        (item, idx) => <Item key={idx} text={item.text} time={item.time} />
                     )
                 }
             </ul>
