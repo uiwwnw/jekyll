@@ -1,27 +1,47 @@
+import list from './list';
 import React from 'react';
 
 class Log extends React.Component {
+    constructor() {
+        super(...arguments);
+        this.state={
+            filterText: ''
+        };
+    }
+    handleUserInput(searchItem) {
+        this.setState({filterText:searchItem})
+    }
     render() {
         return (
             <article>
                 <h2>로그</h2>
-                <label className="search">
-                    <input type="search"/>
-                </label>
-                <Result />
+                <SearchBar filterText={this.state.filterText} onUserInput={this.handleUserInput.bind(this)} />
+                <Result filterText={this.state.filterText} list={list}/>
             </article>
         );
     }
 }
 
+class SearchBar extends React.Component {
+    handleChange(event) {
+        this.props.onUserInput(event.target.value)
+    }
+    render() {
+        return (
+            <label className="search">
+                <input type="search" placeholder="search" value={this.props.filterText} onChange={this.handleChange.bind(this)} />
+            </label>
+        );
+    }
+}
 class Result extends React.Component {
     render() {
         return (
             <div>
                 <h2>Done</h2>
-                <Done />
+                <Done filterText={this.props.filterText} list={list} />
                 <h2>Todo</h2>
-                <Todo />
+                <Todo filterText={this.props.filterText} list={list} />
             </div>
         )
     }
@@ -29,11 +49,16 @@ class Result extends React.Component {
 
 class Done extends React.Component {
     render() {
+        let filtered = this.props.list.filter(
+          (item) => item.done === true && item.text.indexOf(this.props.filterText) !== -1  
+        );
         return (
             <ul className="logList">
-                <li>다국어 어플 제작 시 기본적인 scss탬플릿 제작</li>
-                <li>정말 간단한 jQuery드레그 구현(팝업용)</li>
-                <li>WAI-ARIA 스터디 및 내부 스터디 적용</li>
+                {
+                    filtered.map(
+                        (item, idx) => <Item key={idx} text={item.text} time={item.time?item.time:'미정'} />
+                    )
+                }
             </ul>
         )
     }
@@ -41,13 +66,24 @@ class Done extends React.Component {
 
 class Todo extends React.Component {
     render() {
+        let filtered = this.props.list.filter(
+          (item) => item.done !== true && item.text.indexOf(this.props.filterText) !== -1
+        );
         return (
             <ul className="logList">
-                <li>다국어 어플 제작 시 기본적인 scss탬플릿 제작</li>
-                <li>정말 간단한 jQuery드레그 구현(팝업용)</li>
-                <li>WAI-ARIA 스터디 및 내부 스터디 적용</li>
+                {
+                    filtered.map(
+                        (item, idx) => <Item key={idx} text={item.text} time={item.time?item.time:'미정'} />
+                    )
+                }
             </ul>
         )
+    }
+}
+
+class Item extends React.Component {
+    render() {
+        return <li key={this.props.idx}><span>{this.props.time}</span>{this.props.text}</li>
     }
 }
 

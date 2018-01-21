@@ -2,9 +2,9 @@ import React from 'react';
 
 class Nav extends React.Component {
     render() {
-        let items = this.props.menu.map(function (tab) {
+        let items = this.props.menu.map(function (tab, idx) {
             return (
-                <button key={tab.id} onClick={this.props.onTab} data-tab-key={tab.id}>{tab.name}</button>
+                <button key={idx} onClick={this.props.onTab} data-tab-key={idx}>{tab.name}</button>
                 );
         }, this);
         
