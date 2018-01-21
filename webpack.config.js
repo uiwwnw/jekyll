@@ -25,7 +25,7 @@ const config = {
     module: {
         loaders: [
             {
-                test: /\.scss$/,
+                test: /\.scss|css$/,
                 use: [{
                     loader: 'style-loader'
                 }, {
@@ -41,7 +41,7 @@ const config = {
             , {
                 test: /\.(jpg|png)$/,
                 loader: [
-                    'url-loader?name=./dist/img/[hash].[ext]'
+                    'file-loader?name=./dist/img/[hash].[ext]'
                 ]
             }
             , {
@@ -55,7 +55,7 @@ const config = {
             }
             , {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-                loader: 'url-loader?name=./dist/img/[hash].[ext]'
+                loader: 'file-loader?name=./dist/font/[hash].[ext]'
             }
         ]
     },

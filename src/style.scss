@@ -1,7 +1,5 @@
 @charset "UTF-8";
 @import "./spritesmith-generated/sprite";
-@import "./fontello/css/animation.css";
-@import "./fontello/css/fontello.css";
 @include sprites($spritesheet-sprites);
 
 $headerHeight: 8rem;
@@ -256,6 +254,7 @@ body {
 .footer {
     text-align: center;
     height: $footerHeight;
+    line-height: $footerHeight;
 }
 
 // 홈
@@ -264,13 +263,25 @@ body {
     width: 100%;
 }
 
+// 컨텍
+.link {
+    display: block;
+    margin: 1rem;
+}
+
 // 로그
 
 .search {
     color: $black;
+
+    i {
+        color: $white;
+    }
 }
 
 .logList {
+    margin-bottom: 0;
+    
     span {
         margin-right: .5rem;
         color: rgba(255, 255, 255, .3);

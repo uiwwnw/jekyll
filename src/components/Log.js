@@ -29,6 +29,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <label className="search">
+                <i className="icon-search"></i>
                 <input type="search" placeholder="search" value={this.props.filterText} onChange={this.handleChange.bind(this)} />
             </label>
         );
@@ -38,9 +39,9 @@ class Result extends React.Component {
     render() {
         return (
             <div>
-                <h2>Done</h2>
+                <h3><i className="icon-check"></i>Done</h3>
                 <Done filterText={this.props.filterText} list={list} />
-                <h2>Todo</h2>
+                <h3><i className="icon-check-empty-1"></i>Todo</h3>
                 <Todo filterText={this.props.filterText} list={list} />
             </div>
         )

@@ -5,8 +5,8 @@ class Contact extends React.Component {
         return (
             <article>
                 <h2>개인연락처</h2>
-                <p>연락은 메일로 부탁드립니다.</p>
-                <a href="mailto:uiwwnw@icloud.com"><i className="icon-mail"></i>uiwwnw@icloud.com</a>
+                <a className="link" href="mailto:uiwwnw@icloud.com"><i className="icon-mail"></i>uiwwnw@icloud.com</a>
+                <a className="link" href="https://github.com/uiwwnw"><i className="icon-github-circled-alt"></i>https://github.com/uiwwnw</a>
             </article>
         );
     }
