@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import Contact from './Contact';
-import Test1 from './Test1';
+import Log from './Log';
 
 class Content extends React.Component {
     render() {
@@ -13,12 +13,12 @@ class Content extends React.Component {
             content = <Contact />
         }
         if (this.props.content === this.props.menu[2].name) {
-            content = <Test1 />
+            content = <Log />
         }
         // for (var i = 0; i < this.props.menu.length; i++) {
         //     if (this.props.content == this.props.menu[i].name) {
         //         var name = this.props.menu[i].name;
-        //         content = { name }
+        //         content = name
         //     }
         // }
         return (

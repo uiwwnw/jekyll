@@ -3,8 +3,7 @@ import React from 'react';
 let menu = [
     { 'id': 0, 'name': 'Home'}
     ,{ 'id': 1, 'name': 'Contact'}
-    ,{ 'id': 2, 'name': 'Test1'}
-    ,{ 'id': 3, 'name': 'test2'}
+    ,{ 'id': 2, 'name': 'Log'}
 ]
 
 export default menu;

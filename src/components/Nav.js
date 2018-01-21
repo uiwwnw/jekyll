@@ -10,7 +10,7 @@ class Nav extends React.Component {
         
         return (
             <nav className="nav">
-                <div>
+                <div data-align="middle">
                     {items}
                 </div>
             </nav>

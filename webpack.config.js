@@ -8,7 +8,7 @@ const extractSass = new ExtractTextPlugin({
     disable: process.env.NODE_ENV === 'development'
 });
 
-var config = {
+const config = {
     context: path.resolve(__dirname, 'src'),
     entry: './index.js',
     output: {
@@ -39,9 +39,9 @@ var config = {
                 }]
             }
             , {
-                test: /\.png$/,
-                loaders: [
-                    'file-loader?name=./dist/img/[hash].[ext]'
+                test: /\.(jpg|png)$/,
+                loader: [
+                    'url-loader?name=./dist/img/[hash].[ext]'
                 ]
             }
             , {
@@ -64,6 +64,7 @@ var config = {
         // modulesDirectories: ['node_modules', 'spritesmith-generated'],
         //webpack 2:
         modules: ['node_modules', 'spritesmith-generated']
+        // modules: ['node_modules']
     },
     plugins: [
         new SpritesmithPlugin({
@@ -84,16 +85,16 @@ var config = {
 
 };
 
-if (process.env.NODE_ENV === 'production') {
-    config.devtool = false;
-    config.plugins = [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({ comments: false }),
-        new webpack.DefinePlugin({
-            'process.env': { NODE_ENV: JSON.stringify('production') }
-        })
-    ];
-}
+// if (process.env.NODE_ENV === 'production') {
+//     config.devtool = false;
+//     config.plugins = [
+//         new webpack.optimize.OccurenceOrderPlugin(),
+//         new webpack.optimize.UglifyJsPlugin({ comments: false }),
+//         new webpack.DefinePlugin({
+//             'process.env': { NODE_ENV: JSON.stringify('production') }
+//         })
+//     ];
+// }
 
 
 module.exports = config;

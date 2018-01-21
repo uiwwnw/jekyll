@@ -5,7 +5,6 @@ import Nav from './Nav';
 import Footer from './Footer';
 import menu from './menu';
 
-
 class App extends React.Component {
     constructor() {
         super(...arguments);

@@ -6,30 +6,17 @@
 
 $headerHeight: 8rem;
 $footerHeight: 3rem;
-
+$fontSizeNormal: 1.2rem;
 
 $white: #fff;
 $gray: #ededed;
 $dark: #333;
 $black: #000;
 $bg: $black;
-
-
-%fwb {
-    font-weight: 700;
-}
-
-%fwn {
-    font-weight: 400;
-}
-
-%fwl {
-    font-weight: 200;
-}
-
-%fwt {
-    font-weight: 100;
-}
+$fwb: 700;
+$fwn: 400;
+$fwl: 200;
+$fwt: 100;
 
 %ellipsis {
     overflow: hidden;
@@ -39,11 +26,15 @@ $bg: $black;
 
 %vam {
     white-space: nowrap;
-    >* {
+    font-size: 0;
+
+    > [data-align="middle"]{
         display: inline-block;
         vertical-align: middle;
         white-space: normal;
+        font-size: $fontSizeNormal;
     }
+
     &:before {
         display: inline-block;
         vertical-align: middle;
@@ -265,4 +256,8 @@ body {
 .footer {
     text-align: center;
     height: $footerHeight;
+}
+
+.myFace {
+    width: 100%;
 }
