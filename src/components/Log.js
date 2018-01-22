@@ -39,10 +39,10 @@ class Result extends React.Component {
     render() {
         return (
             <div>
-                <h3><i className="icon-check"></i>Done</h3>
-                <Done filterText={this.props.filterText} list={list} />
                 <h3><i className="icon-check-empty"></i>Todo</h3>
                 <Todo filterText={this.props.filterText} list={list} />
+                <h3><i className="icon-check"></i>Done</h3>
+                <Done filterText={this.props.filterText} list={list} />
             </div>
         )
     }
@@ -51,7 +51,7 @@ class Result extends React.Component {
 class Done extends React.Component {
     render() {
         let filtered = this.props.list.filter(
-          (item) => item.done === true && (item.text.indexOf(this.props.filterText) !== -1 || item.time.indexOf(this.props.filterText) !== -1)
+          (item) => item.done === true && (item.text.indexOf(this.props.filterText) !== -1 || item.time.indexOf(this.props.filterText) !== -1 || (item.link === undefined ? false : item.link.indexOf(this.props.filterText) !== -1))
         );
         return (
             <ul className="logList">
@@ -68,7 +68,7 @@ class Done extends React.Component {
 class Todo extends React.Component {
     render() {
         let filtered = this.props.list.filter(
-            (item) => item.done !== true && (item.text.indexOf(this.props.filterText) !== -1 || item.time.indexOf(this.props.filterText) !== -1)
+            (item) => item.done !== true && (item.text.indexOf(this.props.filterText) !== -1 || item.time.indexOf(this.props.filterText) !== -1 || (item.link === undefined ? false : item.link.indexOf(this.props.filterText) !== -1))
         );
         return (
             <ul className="logList">

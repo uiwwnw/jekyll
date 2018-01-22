@@ -111,6 +111,11 @@ body {
         min-height: 100vh;
         padding: 0 1rem;
 
+        > article {
+            display: inline-block;
+            width: 100%;
+        }
+
         &.hasHeader {
             padding-top: $headerHeight;
             min-height: calc(100vh - #{$headerHeight});
