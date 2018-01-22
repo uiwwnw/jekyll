@@ -256,9 +256,15 @@ body {
     text-align: center;
     background: rgba(0, 0, 0, .637);
 
+    [data-align] {
+        width: 80%;
+    }
+
     button {
         display: block;
         width: 100%;
+        line-height: 1.4;
+        font-size: 2rem;
         text-align: center;
         pointer-events: all;
     }
