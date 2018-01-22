@@ -91,7 +91,8 @@ html {
 
 body {
     position: relative;
-    margin: 0;
+    max-width: 102.4rem;
+    margin: auto;
     padding: 0;
     color: $white;
     font-family: $fontFamily;
@@ -134,8 +135,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
+    max-width: 102.4rem;
     height: $headerHeight;
+    margin: auto;
     font-size: 2rem;
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 70%,rgba(0,0,0,0) 100%);
 
