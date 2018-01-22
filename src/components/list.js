@@ -16,6 +16,10 @@ let list = [
         'text': '리액트 깃블로그 스프라이트 기능 적용(구현된 부분 실 적용)',
         'time': incomplete
     },
+    {
+        'text': '리액트 깃블로그 링크 검색 구현',
+        'time': incomplete
+    },
 
 
 
