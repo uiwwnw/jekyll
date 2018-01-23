@@ -258,7 +258,18 @@ body {
     height: 100%;
     pointer-events: none;
     text-align: center;
-    background: rgba(0, 0, 0, .637);
+
+    &:after {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 50%;
+        background: rgba(0, 0, 0, .637);
+        content: "";
+    }
 
     [data-align] {
         width: 80%;
