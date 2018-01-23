@@ -10912,6 +10912,13 @@ var list = [{
     'text': '리액트 깃블로그 스프라이트 기능 적용(구현된 부분 실 적용)',
     'time': incomplete
 }, {
+    'text': 'json 으로 변경해서 빌드없이 로그 변경 가능하게 수정',
+    'time': incomplete
+}, {
+    'done': true,
+    'time': '2018/01/23',
+    'text': '리엑트 깃블로그 0.3.0 release'
+}, {
     'done': true,
     'text': '리액트 깃블로그 링크 검색 구현',
     'time': '2018/01/22'
