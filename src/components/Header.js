@@ -4,7 +4,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className="header">
-                <button className={this.props.navActive ? 'callNav active' : 'callNav'} onClick={this.props.onClick}>
+                <button className={this.props.hasOpen ? 'callNav active' : 'callNav'} onClick={this.props.onOpenNav}>
                     <i></i>
                 </button>
                 <h1>{this.props.content}</h1>
@@ -15,17 +15,17 @@ class Header extends React.Component {
             </header>
         );
     }
-    // toggleSidenav() {
+    // openNav() {
     //     this.refs.active.classList.toggle('active');
     //     this.setProp({nav:!this.props.nav})
     // }
 
     // componentDidMount() {
-    //     this.refs.active.addEventListener('click', this.toggleSidenav);
+    //     this.refs.active.addEventListener('click', this.openNav);
     // }
 
     // componentWillUnmount() {
-    //     this.refs.active.removeEventListener('click', this.toggleSidenav);
+    //     this.refs.active.removeEventListener('click', this.openNav);
     // }
 }
 

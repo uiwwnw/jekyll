@@ -12,6 +12,9 @@ class App extends React.Component {
             header: true,
             footer: true,
             navActive: false,
+            popover: false,
+            popup: false,
+            hasOpen: false,
             content: 'Home'
         };
     }
@@ -22,7 +25,7 @@ class App extends React.Component {
         let footer;
         if (this.state.header) {
             header =
-                <Header navActive={this.state.navActive} content={this.state.content} onClick={this.toggleSidenav.bind(this)} onTab={this.changeTab.bind(this)} menu={menu} />;
+                <Header hasOpen={this.state.hasOpen} navActive={this.state.navActive} content={this.state.content} onOpenNav={this.openNav.bind(this)} onCloseAll={this.closeAll.bind(this)} onTab={this.changeTab.bind(this)} menu={menu} />;
             contentClassName += ' hasHeader'
         }
         if (this.state.navActive) {
@@ -35,7 +38,7 @@ class App extends React.Component {
             contentClassName += ' hasFooter'
         }
         return (
-            <main>
+            <main className={this.state.hasOpen?'openPopup':''} onClick={this.state.hasOpen?this.closeAll.bind(this):''} >
                 {header}
                 {nav}
                 <Content content={this.state.content} menu={menu} className={contentClassName}/>
@@ -43,8 +46,17 @@ class App extends React.Component {
             </main>
         );
     }
-    toggleSidenav() {
-        this.setState({ navActive: !this.state.navActive })
+    closeAll() {
+        this.setState({
+            hasOpen: false,
+            navActive: false
+        })
+    }
+    openNav() {
+        this.setState({
+            hasOpen: true,
+            navActive: true
+        })
     }
     changeTab(e) {
         var tabNum = Number(e.target.getAttribute('data-tab-key'));
