@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Home';
+import Portfolio from './Portfolio';
 import Contact from './Contact';
 import Log from './Log';
 
@@ -10,9 +11,12 @@ class Content extends React.Component {
             content = <Home />
         }
         if (this.props.content === this.props.menu[1].name) {
-            content = <Contact />
+            content = <Portfolio />
         }
         if (this.props.content === this.props.menu[2].name) {
+            content = <Contact />
+        }
+        if (this.props.content === this.props.menu[3].name) {
             content = <Log />
         }
         // for (var i = 0; i < this.props.menu.length; i++) {
