@@ -76,7 +76,7 @@ function console_message() {
                 "\n프론트엔드 개발자 윤창원의 포폴사이트입니다.\n"
             );
         }
-        console.log("\x3e \x3e \x3e 채용을 희망하시는 분들은 010-4030-6087로 연락주세요.\n")
+        console.log("\x3e \x3e \x3e 채용을 희망하시는 분들은 010-2354-6087로 연락주세요.\n")
     }
 
     function isUA(userAgent) {
@@ -130,7 +130,7 @@ function settimeout(func, time) {
 function popup_open() {
     $.ajax({
         type: 'post'
-        , url: 'page/popup.html'
+        , url: './page/popup.html'
         , dataType: 'html'
         , success: function (data) {
             $("#container").append(data);
@@ -197,7 +197,7 @@ function skip() {
 function main_page() {
     $.ajax({
         type: 'post'
-        , url: 'page/main.html'
+        , url: './page/main.html'
         , dataType: 'html'
         , success: function (data) {
             $("#container").html(data);
@@ -213,7 +213,7 @@ function main_page() {
 function overview_page() {
     $.ajax({
         type: 'post'
-        , url: 'page/p_overview.html'
+        , url: './page/p_overview.html'
         , dataType: 'html'
         , success: function (data) {
             $(".content").html(data);
@@ -226,7 +226,7 @@ function overview_page() {
 function portfolio_page() {
     $.ajax({
         type: 'post'
-        , url: 'page/p_portfolio.html'
+        , url: './page/p_portfolio.html'
         , dataType: 'html'
         , success: function (data) {
             $(".content").html(data);
@@ -239,7 +239,7 @@ function portfolio_page() {
 function profile_page() {
     $.ajax({
         type: 'post'
-        , url: 'page/p_profile.html'
+        , url: './page/p_profile.html'
         , dataType: 'html'
         , success: function (data) {
             $(".content").html(data);
