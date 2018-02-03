@@ -129,7 +129,7 @@ function settimeout(func, time) {
 /*popup*/
 function popup_open() {
     $.ajax({
-        type: 'post'
+        type: 'get'
         , url: './page/popup.html'
         , dataType: 'html'
         , success: function (data) {
@@ -196,7 +196,7 @@ function skip() {
 //main
 function main_page() {
     $.ajax({
-        type: 'post'
+        type: 'get'
         , url: './page/main.html'
         , dataType: 'html'
         , success: function (data) {
@@ -212,7 +212,7 @@ function main_page() {
 //1page - p_overview
 function overview_page() {
     $.ajax({
-        type: 'post'
+        type: 'get'
         , url: './page/p_overview.html'
         , dataType: 'html'
         , success: function (data) {
@@ -225,7 +225,7 @@ function overview_page() {
 //2page - portfolio_page
 function portfolio_page() {
     $.ajax({
-        type: 'post'
+        type: 'get'
         , url: './page/p_portfolio.html'
         , dataType: 'html'
         , success: function (data) {
@@ -238,7 +238,7 @@ function portfolio_page() {
 //4page - portfolio_page
 function profile_page() {
     $.ajax({
-        type: 'post'
+        type: 'get'
         , url: './page/p_profile.html'
         , dataType: 'html'
         , success: function (data) {
