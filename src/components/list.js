@@ -26,6 +26,11 @@ let list = [
     {
         'done': true,
         'time': '2018/02/03',
+        'text': 'Add Portfolio Tab 0.4.0 release'
+    },
+    {
+        'done': true,
+        'time': '2018/02/03',
         'link': 'https://github.com/uiwwnw/s_animation',
         'text': 'jade scss animation 0.1.0 release'
     },
