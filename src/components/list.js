@@ -25,6 +25,11 @@ let list = [
     
     {
         'done': true,
+        'time': '2018/02/04',
+        'text': 'Add Storytelling Tab 0.5.0 release'
+    },
+    {
+        'done': true,
         'time': '2018/02/03',
         'text': 'Add Portfolio Tab 0.4.0 release'
     },

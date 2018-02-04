@@ -4,6 +4,7 @@ let menu = [
     {'name': 'Home'}
     ,{'name': 'Portfolio'}
     ,{'name': 'Contact'}
+    ,{'name': 'Storytelling'}
     ,{'name': 'Log'}
 ]
 
