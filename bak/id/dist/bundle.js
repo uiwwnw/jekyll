@@ -114,9 +114,29 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Event = function () {
+var El = function El() {
+    _classCallCheck(this, El);
+
+    this._sto;
+    this._idx;
+    this._finTimes = 1;
+    this._times = 0;
+    this._arrAttr = {};
+    this._arrAttr.time = [];
+    this._arrAttr.transition = [];
+    this._arrAttr.transform = [];
+    this._arrAttr.exTransform = [];
+    this._el = document.getElementsByTagName('div');
+    this._finTimes = this._el.length;
+};
+
+var Event = function (_El) {
+    _inherits(Event, _El);
+
     function Event() {
         _classCallCheck(this, Event);
+
+        return _possibleConstructorReturn(this, (Event.__proto__ || Object.getPrototypeOf(Event)).apply(this, arguments));
     }
 
     _createClass(Event, [{
@@ -128,15 +148,23 @@ var Event = function () {
             this._el[this._times].classList.add('active');
             this._arrAttr.transform[this._times] !== null && this._el[this._times].setAttribute('style', 'transform:' + this._arrAttr.transform[this._times]);
             if (this._el[this._times - 1] === undefined) {
+                this._el[this._finTimes - 1].classList.remove('active');
                 return false;
             }
             this._el[this._times - 1].classList.remove('active');
+            if (this._times === this._finTimes) {}
             // console.log(this._el);
+        }
+    }, {
+        key: 'chk_idx',
+        value: function chk_idx() {
+            this._idx = this._times;
+            return this._idx;
         }
     }]);
 
     return Event;
-}();
+}(El);
 
 var Repeat = function (_Event) {
     _inherits(Repeat, _Event);
@@ -144,19 +172,20 @@ var Repeat = function (_Event) {
     function Repeat() {
         _classCallCheck(this, Repeat);
 
-        var _this2 = _possibleConstructorReturn(this, (Repeat.__proto__ || Object.getPrototypeOf(Repeat)).call(this));
+        var _this3 = _possibleConstructorReturn(this, (Repeat.__proto__ || Object.getPrototypeOf(Repeat)).call(this));
 
-        _this2._sto;
-        _this2._finTimes = 1;
-        _this2._times = 0;
-        _this2._done = false;
-        return _this2;
+        _this3._done = true;
+        return _this3;
     }
 
     _createClass(Repeat, [{
         key: 'repeat',
         value: function repeat() {
-            if (!this._done === false || this._times < this._finTimes) {
+            // console.log(this._done);
+            if (this._done === false) {
+                return false;
+            }
+            if (this._times < this._finTimes) {
                 var _this = this;
                 clearTimeout(_this._sto);
                 _this._sto = setTimeout(function () {
@@ -173,6 +202,23 @@ var Repeat = function (_Event) {
         value: function _return() {
             return this._times;
         }
+    }, {
+        key: 'stop',
+        value: function stop() {
+            this._done = false;
+        }
+    }, {
+        key: 'continue',
+        value: function _continue() {
+            this._times = this._idx || 0;
+            this._done = true;
+        }
+    }, {
+        key: 'restart',
+        value: function restart() {
+            this._times = 0;
+            this._done = true;
+        }
     }]);
 
     return Repeat;
@@ -184,16 +230,7 @@ var Animation = function (_Repeat) {
     function Animation() {
         _classCallCheck(this, Animation);
 
-        var _this3 = _possibleConstructorReturn(this, (Animation.__proto__ || Object.getPrototypeOf(Animation)).call(this));
-
-        _this3._arrAttr = {};
-        _this3._arrAttr.time = [];
-        _this3._arrAttr.transition = [];
-        _this3._arrAttr.transform = [];
-        _this3._arrAttr.exTransform = [];
-        _this3._el = document.getElementsByTagName('div');
-        _this3._finTimes = _this3._el.length;
-        return _this3;
+        return _possibleConstructorReturn(this, (Animation.__proto__ || Object.getPrototypeOf(Animation)).apply(this, arguments));
     }
 
     _createClass(Animation, [{
@@ -219,32 +256,30 @@ var Animation = function (_Repeat) {
     return Animation;
 }(Repeat);
 
-// class sto extends active {
-//     constructor() {
-//         super();
-//         this._sto = 0;
-//         // this._time = 500;
-//     }
-//     return() {
-//         const th = this;
-//         // console.log(this.method());
-//         clearTimeout(this._sto);
-//         this._sto = setTimeout(function() {
-//             th.method();
-//         }, this._time);
-//     }
-// }
-
 var start = new Animation();
 start.method();
 start.spoid();
-// const e = new active;
-// console.log(e)
-// e.method(1000);
-// const a = new sto();
-// a.return()
-// console.log(a.return())
-// a.method()
+
+// document.getElementById('stop').onclick = function () {
+//     alert('에니메이션이 멈춥니다.');
+//     start.chk_idx();
+//     start.stop();
+// }
+
+// document.getElementById('reStart').onclick = function () {
+//     alert('에니메이션이 다시 시작합니다.');
+//     // console.log(start.method.constructor())
+//     start.continue();
+//     start.method();
+// }
+
+// document.getElementById('newStart').onclick = function () {
+//     alert('에니메이션이 새로 시작합니다.');
+//     // console.log(start.method.constructor())
+//     start.reset();
+//     start.method();
+//     start.spoid();
+// }
 
 /***/ }),
 /* 2 */
@@ -255,7 +290,7 @@ exports = module.exports = __webpack_require__(3)(true);
 
 
 // module
-exports.push([module.i, ".active[data-transition=\"0.1\"] {\n  transition: transform 0.1s; }\n\n.active[data-transition=\"0.2\"] {\n  transition: transform 0.2s; }\n\n.active[data-transition=\"0.3\"] {\n  transition: transform 0.3s; }\n\n.active[data-transition=\"0.4\"] {\n  transition: transform 0.4s; }\n\n.active[data-transition=\"0.5\"] {\n  transition: transform 0.5s; }\n\n.active[data-transition=\"0.6\"] {\n  transition: transform 0.6s; }\n\n.active[data-transition=\"0.7\"] {\n  transition: transform 0.7s; }\n\n.active[data-transition=\"0.8\"] {\n  transition: transform 0.8s; }\n\n.active[data-transition=\"0.9\"] {\n  transition: transform 0.9s; }\n\n.active[data-transition=\"1\"] {\n  transition: transform 1s; }\n\n.active[data-transition=\"1.1\"] {\n  transition: transform 1.1s; }\n\n.active[data-transition=\"1.2\"] {\n  transition: transform 1.2s; }\n\n.active[data-transition=\"1.3\"] {\n  transition: transform 1.3s; }\n\n.active[data-transition=\"1.4\"] {\n  transition: transform 1.4s; }\n\n.active[data-transition=\"1.5\"] {\n  transition: transform 1.5s; }\n\n.active[data-transition=\"1.6\"] {\n  transition: transform 1.6s; }\n\n.active[data-transition=\"1.7\"] {\n  transition: transform 1.7s; }\n\n.active[data-transition=\"1.8\"] {\n  transition: transform 1.8s; }\n\n.active[data-transition=\"1.9\"] {\n  transition: transform 1.9s; }\n\n.active[data-transition=\"2\"] {\n  transition: transform 2s; }\n\n.active[data-transition=\"2.1\"] {\n  transition: transform 2.1s; }\n\n.active[data-transition=\"2.2\"] {\n  transition: transform 2.2s; }\n\n.active[data-transition=\"2.3\"] {\n  transition: transform 2.3s; }\n\n.active[data-transition=\"2.4\"] {\n  transition: transform 2.4s; }\n\n.active[data-transition=\"2.5\"] {\n  transition: transform 2.5s; }\n\n.active[data-transition=\"2.6\"] {\n  transition: transform 2.6s; }\n\n.active[data-transition=\"2.7\"] {\n  transition: transform 2.7s; }\n\n.active[data-transition=\"2.8\"] {\n  transition: transform 2.8s; }\n\n.active[data-transition=\"2.9\"] {\n  transition: transform 2.9s; }\n\n.active[data-transition=\"3\"] {\n  transition: transform 3s; }\n\n.active[data-transition=\"3.1\"] {\n  transition: transform 3.1s; }\n\n.active[data-transition=\"3.2\"] {\n  transition: transform 3.2s; }\n\n.active[data-transition=\"3.3\"] {\n  transition: transform 3.3s; }\n\n.active[data-transition=\"3.4\"] {\n  transition: transform 3.4s; }\n\n.active[data-transition=\"3.5\"] {\n  transition: transform 3.5s; }\n\n.active[data-transition=\"3.6\"] {\n  transition: transform 3.6s; }\n\n.active[data-transition=\"3.7\"] {\n  transition: transform 3.7s; }\n\n.active[data-transition=\"3.8\"] {\n  transition: transform 3.8s; }\n\n.active[data-transition=\"3.9\"] {\n  transition: transform 3.9s; }\n\n.active[data-transition=\"4\"] {\n  transition: transform 4s; }\n\n.active[data-transition=\"4.1\"] {\n  transition: transform 4.1s; }\n\n.active[data-transition=\"4.2\"] {\n  transition: transform 4.2s; }\n\n.active[data-transition=\"4.3\"] {\n  transition: transform 4.3s; }\n\n.active[data-transition=\"4.4\"] {\n  transition: transform 4.4s; }\n\n.active[data-transition=\"4.5\"] {\n  transition: transform 4.5s; }\n\n.active[data-transition=\"4.6\"] {\n  transition: transform 4.6s; }\n\n.active[data-transition=\"4.7\"] {\n  transition: transform 4.7s; }\n\n.active[data-transition=\"4.8\"] {\n  transition: transform 4.8s; }\n\n.active[data-transition=\"4.9\"] {\n  transition: transform 4.9s; }\n\n.active[data-transition=\"5\"] {\n  transition: transform 5s; }\n\n.active[data-color=\"white\"] {\n  color: #fff; }\n\n.active[data-bg=\"white\"] {\n  background: #fff; }\n\n.active[data-color=\"black\"] {\n  color: #000; }\n\n.active[data-bg=\"black\"] {\n  background: #000; }\n\nhtml,\nbody {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  color: #000;\n  background: #fff; }\n\ndiv {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  font-size: 0;\n  text-align: center; }\n  div.active p {\n    font-size: 10vmin; }\n  div:after {\n    display: inline-block;\n    height: 100%;\n    vertical-align: middle;\n    content: \"\"; }\n  div p {\n    display: inline-block;\n    margin: 0;\n    vertical-align: middle;\n    font-size: 0; }\n", "", {"version":3,"sources":["/Users/uiwwnwyoon/work/s_animation/src/src/_ani.scss","/Users/uiwwnwyoon/work/s_animation/src/src/style.scss"],"names":[],"mappings":"AAAA;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAYY,YAJmB,EAKtB;;AAbT;EAgBY,iBARmB,EAStB;;AAjBT;EAYY,YAJoC,EAKvC;;AAbT;EAgBY,iBARoC,EASvC;;ACfT;;EAEI,mBAAkB;EAClB,iBAAgB;EAChB,YAAW;EACX,aAAY;EACZ,UAAS;EACT,0CAAyC;EACzC,YAAW;EACX,iBAAgB,EACnB;;AAED;EACI,mBAAkB;EAClB,OAAM;EACN,SAAQ;EACR,UAAS;EACT,QAAO;EACP,aAAY;EACZ,mBAAkB,EAqBrB;EA5BD;IAWY,kBAAiB,EACpB;EAZT;IAgBQ,sBAAqB;IACrB,aAAY;IACZ,uBAAsB;IACtB,YAAW,EACd;EApBL;IAuBQ,sBAAqB;IACrB,UAAS;IACT,uBAAsB;IACtB,aAAY,EACf","file":"style.scss","sourcesContent":[".active {\n    @for $i from 1 through 50 {\n        $v : $i / 10;\n        &[data-transition=\"#{$v}\"]{\n            transition: transform #{$v}s;\n        }\n    }\n\n    $theme-list: (\"white\", #fff), (\"black\", #000);\n\n    @each $name, $color in $theme-list {\n        &[data-color=\"#{$name}\"]{\n            color: $color;\n        }\n\n        &[data-bg=\"#{$name}\"]{\n            background: $color;\n        }\n    }\n\n    // @for $i from 3 through 10 {\n    //     &[data-ex-transform=\"scale(#{$i})\"] {\n    //         transform: scale(#{$i});\n    //     }\n    // } \n    // @for $i from 1 through 20 {\n    //     $j: $i / 10;\n    //     &[data-ex-transform=\"scale(#{$j})\"] {\n    //         transform: scale(#{$j});\n    //     }\n    // }\n    // @for $i from -5 through 5 {\n    //     $i: $i * 10;\n    //     &[data-ex-transform=\"skewX(#{$i}deg)\"] {\n    //         transform: skewX(#{$i}deg);\n    //     }\n    //     &[data-ex-transform=\"skewY(#{$i}deg)\"] {\n    //         transform: skewY(#{$i}deg);\n    //     }\n    // }\n    // @for $i from -36 through 36 {\n    //     $i: $i * 10;\n    //     &[data-ex-transform=\"rotate(#{$i}deg)\"] {\n    //         transform: rotate(#{$i}deg);\n    //     }\n    // }\n\n    // @for $i from -20 through 20 {\n    //     $i: $i;\n    //     &[data-ex-left=\"#{$i}%\"] {\n    //         left: $i+%;\n    //     }\n    // }\n\n    // @for $i from -20 through 20 {\n    //     $i: $i;\n    //     &[data-ex-top=\"#{$i}%\"] {\n    //         top: $i+%;\n    //     }\n    // }\n}","@charset \"utf-8\";\n@import \"_ani\";\nhtml,\nbody {\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    height: 100%;\n    margin: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    color: #000;\n    background: #fff;\n}\n\ndiv {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    font-size: 0;\n    text-align: center;\n\n    &.active {\n        p {\n            font-size: 10vmin;\n        }\n    }\n\n    &:after {\n        display: inline-block;\n        height: 100%;\n        vertical-align: middle;\n        content: \"\";\n    }\n\n    p {\n        display: inline-block;\n        margin: 0;\n        vertical-align: middle;\n        font-size: 0;\n    }\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".active[data-transition=\"0.1\"] {\n  transition: transform 0.1s; }\n\n.active[data-transition=\"0.2\"] {\n  transition: transform 0.2s; }\n\n.active[data-transition=\"0.3\"] {\n  transition: transform 0.3s; }\n\n.active[data-transition=\"0.4\"] {\n  transition: transform 0.4s; }\n\n.active[data-transition=\"0.5\"] {\n  transition: transform 0.5s; }\n\n.active[data-transition=\"0.6\"] {\n  transition: transform 0.6s; }\n\n.active[data-transition=\"0.7\"] {\n  transition: transform 0.7s; }\n\n.active[data-transition=\"0.8\"] {\n  transition: transform 0.8s; }\n\n.active[data-transition=\"0.9\"] {\n  transition: transform 0.9s; }\n\n.active[data-transition=\"1\"] {\n  transition: transform 1s; }\n\n.active[data-transition=\"1.1\"] {\n  transition: transform 1.1s; }\n\n.active[data-transition=\"1.2\"] {\n  transition: transform 1.2s; }\n\n.active[data-transition=\"1.3\"] {\n  transition: transform 1.3s; }\n\n.active[data-transition=\"1.4\"] {\n  transition: transform 1.4s; }\n\n.active[data-transition=\"1.5\"] {\n  transition: transform 1.5s; }\n\n.active[data-transition=\"1.6\"] {\n  transition: transform 1.6s; }\n\n.active[data-transition=\"1.7\"] {\n  transition: transform 1.7s; }\n\n.active[data-transition=\"1.8\"] {\n  transition: transform 1.8s; }\n\n.active[data-transition=\"1.9\"] {\n  transition: transform 1.9s; }\n\n.active[data-transition=\"2\"] {\n  transition: transform 2s; }\n\n.active[data-transition=\"2.1\"] {\n  transition: transform 2.1s; }\n\n.active[data-transition=\"2.2\"] {\n  transition: transform 2.2s; }\n\n.active[data-transition=\"2.3\"] {\n  transition: transform 2.3s; }\n\n.active[data-transition=\"2.4\"] {\n  transition: transform 2.4s; }\n\n.active[data-transition=\"2.5\"] {\n  transition: transform 2.5s; }\n\n.active[data-transition=\"2.6\"] {\n  transition: transform 2.6s; }\n\n.active[data-transition=\"2.7\"] {\n  transition: transform 2.7s; }\n\n.active[data-transition=\"2.8\"] {\n  transition: transform 2.8s; }\n\n.active[data-transition=\"2.9\"] {\n  transition: transform 2.9s; }\n\n.active[data-transition=\"3\"] {\n  transition: transform 3s; }\n\n.active[data-transition=\"3.1\"] {\n  transition: transform 3.1s; }\n\n.active[data-transition=\"3.2\"] {\n  transition: transform 3.2s; }\n\n.active[data-transition=\"3.3\"] {\n  transition: transform 3.3s; }\n\n.active[data-transition=\"3.4\"] {\n  transition: transform 3.4s; }\n\n.active[data-transition=\"3.5\"] {\n  transition: transform 3.5s; }\n\n.active[data-transition=\"3.6\"] {\n  transition: transform 3.6s; }\n\n.active[data-transition=\"3.7\"] {\n  transition: transform 3.7s; }\n\n.active[data-transition=\"3.8\"] {\n  transition: transform 3.8s; }\n\n.active[data-transition=\"3.9\"] {\n  transition: transform 3.9s; }\n\n.active[data-transition=\"4\"] {\n  transition: transform 4s; }\n\n.active[data-transition=\"4.1\"] {\n  transition: transform 4.1s; }\n\n.active[data-transition=\"4.2\"] {\n  transition: transform 4.2s; }\n\n.active[data-transition=\"4.3\"] {\n  transition: transform 4.3s; }\n\n.active[data-transition=\"4.4\"] {\n  transition: transform 4.4s; }\n\n.active[data-transition=\"4.5\"] {\n  transition: transform 4.5s; }\n\n.active[data-transition=\"4.6\"] {\n  transition: transform 4.6s; }\n\n.active[data-transition=\"4.7\"] {\n  transition: transform 4.7s; }\n\n.active[data-transition=\"4.8\"] {\n  transition: transform 4.8s; }\n\n.active[data-transition=\"4.9\"] {\n  transition: transform 4.9s; }\n\n.active[data-transition=\"5\"] {\n  transition: transform 5s; }\n\n.active[data-color=\"white\"] {\n  color: #fff; }\n\n.active[data-bg=\"white\"] {\n  background: #fff; }\n\n.active[data-color=\"black\"] {\n  color: #000; }\n\n.active[data-bg=\"black\"] {\n  background: #000; }\n\nhtml,\nbody {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  color: #000;\n  background: #fff; }\n\ndiv {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  font-size: 0;\n  text-align: center; }\n  div.active p {\n    font-size: 10vmin; }\n  div:after {\n    display: inline-block;\n    height: 100%;\n    vertical-align: middle;\n    content: \"\"; }\n  div p {\n    display: inline-block;\n    margin: 0;\n    vertical-align: middle;\n    font-size: 0; }\n\n#reStart {\n  position: fixed;\n  top: 0;\n  right: 0;\n  font-size: 5vmin;\n  border: 2px solid #000;\n  background: #fff; }\n  .active + #reStart {\n    display: block; }\n\n#stop {\n  position: fixed;\n  top: 0;\n  left: 0;\n  font-size: 5vmin;\n  border: 2px solid #000;\n  background: #fff; }\n", "", {"version":3,"sources":["/Users/uiwwnwyoon/work/s_animation/src/src/_ani.scss","/Users/uiwwnwyoon/work/s_animation/src/src/style.scss"],"names":[],"mappings":"AAAA;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,2BAA6B,EAChC;;AALT;EAIY,yBAA6B,EAChC;;AALT;EAYY,YAJmB,EAKtB;;AAbT;EAgBY,iBARmB,EAStB;;AAjBT;EAYY,YAJoC,EAKvC;;AAbT;EAgBY,iBARoC,EASvC;;ACfT;;EAEI,mBAAkB;EAClB,iBAAgB;EAChB,YAAW;EACX,aAAY;EACZ,UAAS;EACT,0CAAyC;EACzC,YAAW;EACX,iBAAgB,EACnB;;AAED;EACI,mBAAkB;EAClB,OAAM;EACN,SAAQ;EACR,UAAS;EACT,QAAO;EACP,aAAY;EACZ,mBAAkB,EAqBrB;EA5BD;IAWY,kBAAiB,EACpB;EAZT;IAgBQ,sBAAqB;IACrB,aAAY;IACZ,uBAAsB;IACtB,YAAW,EACd;EApBL;IAuBQ,sBAAqB;IACrB,UAAS;IACT,uBAAsB;IACtB,aAAY,EACf;;AAGL;EACI,gBAAe;EACf,OAAM;EACN,SAAQ;EAER,iBAAgB;EAChB,uBAAsB;EACtB,iBAAgB,EAKnB;EAHG;IACI,eAAc,EACjB;;AAGL;EACI,gBAAe;EACf,OAAM;EACN,QAAO;EACP,iBAAgB;EAChB,uBAAsB;EACtB,iBAAgB,EACnB","file":"style.scss","sourcesContent":[".active {\n    @for $i from 1 through 50 {\n        $v : $i / 10;\n        &[data-transition=\"#{$v}\"]{\n            transition: transform #{$v}s;\n        }\n    }\n\n    $theme-list: (\"white\", #fff), (\"black\", #000);\n\n    @each $name, $color in $theme-list {\n        &[data-color=\"#{$name}\"]{\n            color: $color;\n        }\n\n        &[data-bg=\"#{$name}\"]{\n            background: $color;\n        }\n    }\n\n    // @for $i from 3 through 10 {\n    //     &[data-ex-transform=\"scale(#{$i})\"] {\n    //         transform: scale(#{$i});\n    //     }\n    // } \n    // @for $i from 1 through 20 {\n    //     $j: $i / 10;\n    //     &[data-ex-transform=\"scale(#{$j})\"] {\n    //         transform: scale(#{$j});\n    //     }\n    // }\n    // @for $i from -5 through 5 {\n    //     $i: $i * 10;\n    //     &[data-ex-transform=\"skewX(#{$i}deg)\"] {\n    //         transform: skewX(#{$i}deg);\n    //     }\n    //     &[data-ex-transform=\"skewY(#{$i}deg)\"] {\n    //         transform: skewY(#{$i}deg);\n    //     }\n    // }\n    // @for $i from -36 through 36 {\n    //     $i: $i * 10;\n    //     &[data-ex-transform=\"rotate(#{$i}deg)\"] {\n    //         transform: rotate(#{$i}deg);\n    //     }\n    // }\n\n    // @for $i from -20 through 20 {\n    //     $i: $i;\n    //     &[data-ex-left=\"#{$i}%\"] {\n    //         left: $i+%;\n    //     }\n    // }\n\n    // @for $i from -20 through 20 {\n    //     $i: $i;\n    //     &[data-ex-top=\"#{$i}%\"] {\n    //         top: $i+%;\n    //     }\n    // }\n}","@charset \"utf-8\";\n@import \"_ani\";\nhtml,\nbody {\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    height: 100%;\n    margin: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    color: #000;\n    background: #fff;\n}\n\ndiv {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    font-size: 0;\n    text-align: center;\n\n    &.active {\n        p {\n            font-size: 10vmin;\n        }\n    }\n\n    &:after {\n        display: inline-block;\n        height: 100%;\n        vertical-align: middle;\n        content: \"\";\n    }\n\n    p {\n        display: inline-block;\n        margin: 0;\n        vertical-align: middle;\n        font-size: 0;\n    }\n}\n\n#reStart {\n    position: fixed;\n    top: 0;\n    right: 0;\n    // display: none;\n    font-size: 5vmin;\n    border: 2px solid #000;\n    background: #fff;\n\n    .active + & {\n        display: block;\n    }\n}\n\n#stop {\n    position: fixed;\n    top: 0;\n    left: 0;\n    font-size: 5vmin;\n    border: 2px solid #000;\n    background: #fff;\n}"],"sourceRoot":""}]);
 
 // exports
 
