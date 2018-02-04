@@ -11023,11 +11023,11 @@ var list = [{
 }, {
     'done': true,
     'time': '2018/02/04',
-    'text': 'Add Storytelling Tab 0.5.0 release'
+    'text': 'https://uiwwnw.github.io/ Add Storytelling Tab 0.5.0 release'
 }, {
     'done': true,
     'time': '2018/02/03',
-    'text': 'Add Portfolio Tab 0.4.0 release'
+    'text': 'https://uiwwnw.github.io/ Add Portfolio Tab 0.4.0 release'
 }, {
     'done': true,
     'time': '2018/02/03',
@@ -11036,23 +11036,23 @@ var list = [{
 }, {
     'done': true,
     'time': '2018/01/23',
-    'text': '리엑트 깃블로그 0.3.0 release'
+    'text': 'https://uiwwnw.github.io/ 0.3.0 release'
 }, {
     'done': true,
-    'text': '리액트 깃블로그 링크 검색 구현',
+    'text': 'https://uiwwnw.github.io/ 링크 검색 구현',
     'time': '2018/01/22'
 }, {
     'done': true,
     'time': '2018/01/21',
-    'text': '리엑트 깃블로그 0.2.0 release'
+    'text': 'https://uiwwnw.github.io/ 0.2.0 release'
 }, {
     'done': true,
     'time': '2018/01/21',
-    'text': '리액트 깃블로그 로그탭의 검색기능 추가'
+    'text': 'https://uiwwnw.github.io/ 로그탭의 검색기능 추가'
 }, {
     'done': true,
     'time': '2018/01/21',
-    'text': '리엑트 깃블로그 0.1.0 release'
+    'text': 'https://uiwwnw.github.io/ 0.1.0 release'
 }, {
     'done': true,
     'time': noinput,
@@ -11060,6 +11060,7 @@ var list = [{
 }, {
     'done': true,
     'time': '2018/01/11',
+    'link': 'https://github.com/uiwwnw/q_drag',
     'text': '간단하 jQuery 드레그 공유'
 }];
 
