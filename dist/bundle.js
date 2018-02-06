@@ -10290,8 +10290,6 @@ var Contact = function (_React$Component) {
     _createClass(Contact, [{
         key: 'onInput',
         value: function onInput() {
-            // 'mailto:uiwwnw@icloud.com?subject='
-            // '&body='
             var value = document.querySelector('input').value;
             this.setState({
                 title: value
@@ -10300,8 +10298,6 @@ var Contact = function (_React$Component) {
     }, {
         key: 'onTextarea',
         value: function onTextarea() {
-            // 'mailto:uiwwnw@icloud.com?subject='
-            // '&body='
             var value = document.querySelector('textarea').value;
             var length = value.length;
             this.setState({

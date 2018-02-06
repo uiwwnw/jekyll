@@ -12,16 +12,12 @@ class Contact extends React.Component {
         }
     }
     onInput() {
-        // 'mailto:uiwwnw@icloud.com?subject='
-        // '&body='
         const value = document.querySelector('input').value;
         this.setState({
             title: value
         })
     }
     onTextarea() {
-        // 'mailto:uiwwnw@icloud.com?subject='
-        // '&body='
         const value = document.querySelector('textarea').value;
         const length = value.length;
         this.setState({
