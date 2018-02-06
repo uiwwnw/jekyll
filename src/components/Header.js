@@ -4,7 +4,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className="header">
-                <button className={this.props.hasOpen ? 'callNav active' : 'callNav'} onClick={this.props.onOpenNav}>
+                <button className={this.props.hasOpen ? 'callNav active' : 'callNav'} onClick={this.props.hasOpen ?this.props.onCloseAll:this.props.onOpenNav}>
                     <i></i>
                 </button>
                 <h1>{this.props.content}</h1>

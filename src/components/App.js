@@ -23,6 +23,7 @@ class App extends React.Component {
         let nav;
         let contentClassName = 'content';
         let footer;
+        let dim;
         if (this.state.header) {
             header =
                 <Header hasOpen={this.state.hasOpen} navActive={this.state.navActive} content={this.state.content} onOpenNav={this.openNav.bind(this)} onCloseAll={this.closeAll.bind(this)} onTab={this.changeTab.bind(this)} menu={menu} />;
@@ -37,19 +38,25 @@ class App extends React.Component {
                 <Footer content={this.state.content} menu={menu}/>;
             contentClassName += ' hasFooter'
         }
+        if (this.state.hasOpen) {
+            dim =
+                <i className="dim" onClick={this.closeAll.bind(this)}></i>
+        }
         return (
-            <main className={this.state.hasOpen?'openPopup':''} onClick={this.state.hasOpen?this.closeAll.bind(this):''} >
+            <main className={this.state.hasOpen?'openPopup':''} >
                 {header}
                 {nav}
-                <Content content={this.state.content} menu={menu} className={contentClassName}/>
+                <Content content={this.state.content} menu={menu} className={contentClassName} popup={this.state.popup} fnSendMail={this.fnSendMail.bind(this)}/>
                 {footer}
+                {dim}
             </main>
         );
     }
     closeAll() {
         this.setState({
             hasOpen: false,
-            navActive: false
+            navActive: false,
+            popup: false
         })
     }
     openNav() {
@@ -58,14 +65,22 @@ class App extends React.Component {
             navActive: true
         })
     }
+    fnSendMail(){
+        // const idx = Number(e.target.getAttribute('data-tab-key'));
+        this.setState({
+            hasOpen: !this.state.hasOpen,
+            popup: !this.state.popup
+        });
+    }
     changeTab(e) {
-        var tabNum = Number(e.target.getAttribute('data-tab-key'));
+        const tabNum = Number(e.target.getAttribute('data-tab-key'));
         // if (tabNum === menu[0].id) {
         //     this.setState({
         //         header: false
         //     })
         // }
         this.setState({
+            hasOpen: false,
             navActive: false,
             content: menu[tabNum].name
         })

@@ -25,6 +25,11 @@ let list = [
     
     {
         'done': true,
+        'time': '2018/02/06',
+        'text': 'https://uiwwnw.github.io/ Add popup 0.5.2 release'
+    },
+    {
+        'done': true,
         'time': '2018/02/04',
         'text': 'https://uiwwnw.github.io/ Add Storytelling Tab 0.5.0 release'
     },

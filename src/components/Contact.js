@@ -3,31 +3,52 @@ import Dialog from './Dialog';
 
 class Contact extends React.Component {
     constructor() {
-        super(...arguments);
+        super();
+        
         this.state = {
-            dialog: false
-        };
+            textareaLength: 0,
+            title: '제목을 입력해주세요',
+            text: '내용을 입력해주세요'
+        }
+    }
+    onInput() {
+        // 'mailto:uiwwnw@icloud.com?subject='
+        // '&body='
+        const value = document.querySelector('input').value;
+        this.setState({
+            title: value
+        })
+    }
+    onTextarea() {
+        // 'mailto:uiwwnw@icloud.com?subject='
+        // '&body='
+        const value = document.querySelector('textarea').value;
+        const length = value.length;
+        this.setState({
+            textareaLength: length,
+            text: value
+        })
     }
     render() {
         let sendMail;
-        if (this.state.dialog) {
-            let content = <a></a>; 
+        if (this.props.popup) {
+            const content = 
+            <div>
+                <input onChange={this.onInput.bind(this)} type="text" maxLength="40" placeholder="제목을 입력해주세요"/>
+                <textarea onChange={this.onTextarea.bind(this)} data-length={this.state.textareaLength} placeholder="내용을 입력해주세요"/>
+            </div>
+            ; 
             // href="mailto:uiwwnw@icloud.com"
-            sendMail = <Dialog dialogHeader="이메일보내기" dialogContent={content} />
+            sendMail = <Dialog dialogHeader="이메일보내기" dialogContent={content} fnSendMail={this.props.fnSendMail.bind(this)} title={this.state.title} text={this.state.text}/>
         };
         return (
             <article>
                 <h2>개인연락처</h2>
-                <button className="link" onClick={this.fnSendMail.bind(this)}><i className="icon-mail"></i>uiwwnw@icloud.com</button>
+                <button className="link" onClick={this.props.fnSendMail.bind(this)}><i className="icon-mail"></i>uiwwnw@icloud.com</button>
                 <a className="link" href="https://github.com/uiwwnw"><i className="icon-github-circled-alt"></i>https://github.com/uiwwnw</a>
                 {sendMail}
             </article>
         );
-    }
-    fnSendMail(){
-        this.setState({
-            dialog: !this.state.dialog
-        });
     }
 }
 

@@ -15,7 +15,7 @@ class Content extends React.Component {
             content = <Portfolio />
         }
         if (this.props.content === this.props.menu[2].name) {
-            content = <Contact />
+            content = <Contact fnSendMail={this.props.fnSendMail.bind(this)} popup={this.props.popup}/>
         }
         if (this.props.content === this.props.menu[3].name) {
             content = <Storytelling />
