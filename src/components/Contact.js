@@ -31,7 +31,8 @@ class Contact extends React.Component {
             const content = 
             <div>
                 <input onChange={this.onInput.bind(this)} type="text" maxLength="40" placeholder="제목을 입력해주세요"/>
-                <textarea onChange={this.onTextarea.bind(this)} data-length={this.state.textareaLength} placeholder="내용을 입력해주세요"/>
+                <textarea onChange={this.onTextarea.bind(this)} placeholder="내용을 입력해주세요" rows="5"/>
+                <sub>{this.state.textareaLength}</sub>
             </div>
             ; 
             // href="mailto:uiwwnw@icloud.com"

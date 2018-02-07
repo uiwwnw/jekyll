@@ -84,7 +84,11 @@ button {
     background: none;
 }
 
+textarea,
 input {
+    margin: 0;
+    padding: 0;
+    border: 0;
     font-family: $fontFamily;
 }
 
@@ -196,6 +200,7 @@ main {
                 position: fixed;
                 right: 0;
                 top: 0;
+                display: none;
                 width: 100%;
                 height: 8rem;
                 content: "";
@@ -237,6 +242,10 @@ main {
                 }
             }
             &.active {
+                &:before {
+                    display: block;
+                }
+
                 i {
                     &:before {
                         height: 0;
@@ -346,6 +355,8 @@ main {
 // portfolio
 iframe {
     width: 100%;
+    margin: -.2rem 0;
+    box-sizing: border-box;
     min-height: inherit; // height: calc(100vh - 11rem);
     border: .1rem solid #fff;
 }
@@ -353,7 +364,7 @@ iframe {
 .dialog {
     @extend %vam;
     z-index: z-index(popup);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -380,11 +391,52 @@ iframe {
                 font-size: 1.6rem;
                 padding-bottom: 1rem;
             }
+
+            &.dialogContent {
+                &:after {
+                    display: block;
+                    clear: both;
+                    content: "";
+                }
+            }
+
+            &.dialogFooter {
+                display: table;
+                width: 100%;
+                border-collapse: collapse;
+
+                > * {
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    border: 1px solid;
+                }
+            }
         }
     }
     
     input {
         display: block;
         width: 100%;
+        height: 2rem;
+        padding: 0 .5rem;
+        box-sizing: border-box;
+        border: .1rem solid #ddd;
+        border-radius: .3rem;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0 .5rem;
+        box-sizing: border-box;
+        border: .1rem solid #ddd;
+        border-radius: .3rem;
+        resize: none;
+    }
+
+    sub {
+        float: right;
     }
 }
