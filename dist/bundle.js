@@ -11071,7 +11071,7 @@ var Portfolio = function (_React$Component) {
     _createClass(Portfolio, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement("iframe", { src: "./bak/port/index.html" });
+            return _react2.default.createElement("iframe", { title: "2016 \uD3EC\uD2B8\uD3F4\uB9AC\uC624", src: "./bak/port/index.html" });
         }
     }]);
 
@@ -11117,7 +11117,7 @@ var Storytelling = function (_React$Component) {
     _createClass(Storytelling, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement("iframe", { src: "./bak/id/index.html" });
+            return _react2.default.createElement("iframe", { title: "uiwwnw is cheese for me", src: "./bak/id/index.html" });
         }
     }]);
 
