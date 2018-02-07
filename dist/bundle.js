@@ -11162,15 +11162,15 @@ var list = [{
 }, {
     'done': true,
     'time': '2018/02/06',
-    'text': 'https://uiwwnw.github.io/ Add popup 0.5.2 release'
+    'text': 'Add popup 0.5.2 release'
 }, {
     'done': true,
     'time': '2018/02/04',
-    'text': 'https://uiwwnw.github.io/ Add Storytelling Tab 0.5.0 release'
+    'text': 'Add Storytelling Tab 0.5.0 release'
 }, {
     'done': true,
     'time': '2018/02/03',
-    'text': 'https://uiwwnw.github.io/ Add Portfolio Tab 0.4.0 release'
+    'text': 'Add Portfolio Tab 0.4.0 release'
 }, {
     'done': true,
     'time': '2018/02/03',
@@ -11179,23 +11179,15 @@ var list = [{
 }, {
     'done': true,
     'time': '2018/01/23',
-    'text': 'https://uiwwnw.github.io/ 0.3.0 release'
-}, {
-    'done': true,
-    'text': 'https://uiwwnw.github.io/ 링크 검색 구현',
-    'time': '2018/01/22'
+    'text': '0.3.0 release'
 }, {
     'done': true,
     'time': '2018/01/21',
-    'text': 'https://uiwwnw.github.io/ 0.2.0 release'
+    'text': '0.2.0 release'
 }, {
     'done': true,
     'time': '2018/01/21',
-    'text': 'https://uiwwnw.github.io/ 로그탭의 검색기능 추가'
-}, {
-    'done': true,
-    'time': '2018/01/21',
-    'text': 'https://uiwwnw.github.io/ 0.1.0 release'
+    'text': '0.1.0 release'
 }, {
     'done': true,
     'time': noinput,
@@ -11204,7 +11196,7 @@ var list = [{
     'done': true,
     'time': '2018/01/11',
     'link': 'https://github.com/uiwwnw/q_drag',
-    'text': '간단하 jQuery 드레그 공유'
+    'text': '간단하 jQuery 드레그'
 }];
 
 exports.default = list;
