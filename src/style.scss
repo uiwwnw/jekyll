@@ -8,6 +8,7 @@ $fontFamily: system-ui,
 -apple-system,
 BlinkMacSystemFont,
 sans-serif;
+$query-mobile: not (min-width: 640px);
 $white: #fff;
 $gray: #ededed;
 $dark: #333;
@@ -234,10 +235,12 @@ main {
                     content: "";
                 }
             }
-            &:hover {
-                i {
-                    &:after {
-                        transform: rotate(-20deg);
+            @media #{$query-mobile} {
+                &:hover {
+                    i {
+                        &:after {
+                            transform: rotate(-20deg);
+                        }
                     }
                 }
             }
