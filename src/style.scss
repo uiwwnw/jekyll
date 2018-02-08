@@ -8,7 +8,7 @@ $fontFamily: system-ui,
 -apple-system,
 BlinkMacSystemFont,
 sans-serif;
-$query-mobile: not (min-width: 640px);
+$query-mobile: 'not (min-width: 640px)';
 $white: #fff;
 $gray: #ededed;
 $dark: #333;
