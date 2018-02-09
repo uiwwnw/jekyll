@@ -11071,7 +11071,7 @@ var Portfolio = function (_React$Component) {
     _createClass(Portfolio, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement("iframe", { title: "2016 \uD3EC\uD2B8\uD3F4\uB9AC\uC624", src: "./bak/port/index.html" });
+            return _react2.default.createElement("iframe", { title: "2016 \uD3EC\uD2B8\uD3F4\uB9AC\uC624", src: "./iframe/port/index.html" });
         }
     }]);
 
@@ -11117,7 +11117,7 @@ var Storytelling = function (_React$Component) {
     _createClass(Storytelling, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement("iframe", { title: "uiwwnw is cheese for me", src: "./bak/id/index.html" });
+            return _react2.default.createElement("iframe", { title: "uiwwnw is cheese for me", src: "./iframe/id/index.html" });
         }
     }]);
 
@@ -11159,6 +11159,10 @@ var list = [{
 }, {
     'text': 'json 으로 변경해서 빌드없이 로그 변경 가능하게 수정',
     'time': incomplete
+}, {
+    'done': true,
+    'time': '2018/02/09',
+    'text': 'portfolio edit(2015년작삭제) 0.6.0 release'
 }, {
     'done': true,
     'time': '2018/02/06',

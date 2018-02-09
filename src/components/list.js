@@ -25,6 +25,11 @@ let list = [
     
     {
         'done': true,
+        'time': '2018/02/09',
+        'text': 'portfolio edit(2015년작삭제) 0.6.0 release'
+    },
+    {
+        'done': true,
         'time': '2018/02/06',
         'text': 'Add popup 0.5.2 release'
     },
