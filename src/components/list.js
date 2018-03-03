@@ -22,7 +22,12 @@ let list = [
     },
     
     
-    
+    {
+        'text': '지뢰찾기게임 추가(낱말게임하위브렌치)',
+        'link': 'https://github.com/uiwwnw/v_wordgame',
+        'time': '2018/03/04',
+        'text': 'v_wordgame/#second_game 0.7.0 release'
+    },
     {
         'done': true,
         'time': '2018/02/09',
