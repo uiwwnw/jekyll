@@ -10657,7 +10657,7 @@ var Findmine = function (_React$Component) {
             var box = '';
             var pack = '';
             if (this.state.start) {
-                box = _react2.default.createElement(Box, { x: this.state.x, y: this.state.x, level: this.state.level, newstart: this.newstart.bind(this), restart: this.restart.bind(this), startDate: this.state.startDate });
+                box = _react2.default.createElement(Box, { x: this.state.x, y: this.state.y, level: this.state.level, newstart: this.newstart.bind(this), restart: this.restart.bind(this), startDate: this.state.startDate });
             } else {
                 pack = _react2.default.createElement(
                     'div',
@@ -10936,7 +10936,7 @@ var Box = function (_Findmine) {
                     _react2.default.createElement(
                         'p',
                         null,
-                        this.props.x * this.props.y / this.props.level * 4 > Math.ceil((new Date() - this.props.startDate) / 1000) ? '정말 잘하시네요~~' : '조금더분발해주세요~~'
+                        this.props.x * this.props.y / this.props.level * 3 > Math.ceil((new Date() - this.props.startDate) / 1000) ? '정말 잘하시네요~~' : '조금더분발해주세요~~'
                     ),
                     _react2.default.createElement(
                         'button',
