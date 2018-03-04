@@ -5,6 +5,7 @@ let menu = [
     ,{'name': 'Portfolio'}
     ,{'name': 'Contact'}
     ,{'name': 'Storytelling'}
+    ,{'name': 'Findmine'}
     ,{'name': 'Log'}
 ]
 
