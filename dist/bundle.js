@@ -11248,36 +11248,7 @@ var Home = function (_React$Component) {
                     null,
                     '\uC548\uB155\uD558\uC138\uC694. \uD504\uB860\uD2B8\uC5D4\uB4DC\uAC1C\uBC1C\uC790 \uC724\uCC3D\uC6D0\uC785\uB2C8\uB2E4.'
                 ),
-                _react2.default.createElement('img', { className: 'myFace', src: _img2.default }),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    '\uC544\uC8FC \uAC04\uB2E8\uD55C \uB9AC\uC5D1\uD2B8 sample\uC744 \uB9CC\uB4E4\uC5B4\uBCF4\uC558\uC2B5\uB2C8\uB2E4. \uD2B9\uBCC4\uD558\uB2E4\uBA74'
-                ),
-                _react2.default.createElement(
-                    'ul',
-                    null,
-                    _react2.default.createElement(
-                        'li',
-                        null,
-                        '\uC774\uBBF8\uC9C0\uC2A4\uD504\uB77C\uC774\uD2B8 sprite-smith\uC640'
-                    ),
-                    _react2.default.createElement(
-                        'li',
-                        null,
-                        '\uC544\uC774\uCF58\uD3F0\uD2B8 fontello \uB4F1 \uCD94\uAC00 \uC801\uC6A9'
-                    )
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    '\uD588\uB2E4\uB294 \uC810\uC785\uB2C8\uB2E4. \uAE30\uBCF8\uC801\uC73C\uB85C \uC571\uC758 \uD615\uD0DC\uB85C \uC81C\uC791\uD574\uBCF4\uC558\uC2B5\uB2C8\uB2E4. \uAC10\uC0AC\uD569\uB2C8\uB2E4.'
-                ),
-                _react2.default.createElement(
-                    'sub',
-                    null,
-                    '(\uC5EC\uB2F4\uC774\uC9C0\uB9CC, \uAC04\uB2E8\uD55C \uAC1C\uC778 \uAE43\uBE14\uB85C\uADF8\uB85C \uC0AC\uC6A9\uD558\uB824\uB358\uAC8C \uC5B4\uCC0C\uC5B4\uCC0C \uB9AC\uC5D1\uD2B8\uC801\uC6A9, \uAC1C\uC778 \uD3EC\uD3F4\uD648\uD53C\uB85C\uAE4C\uC9C0 \uC9C4\uD654(?)\uD558\uAC8C \uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uD3B8\uD558\uAC8C \uB85C\uADF8 \uC62C\uB9AC\uB294 \uD398\uC774\uC9C0\uB294 \uC0C8\uB85C \uB610 \uB9CC\uB4E4\uC5B4\uC57C\uD560\uAC70\uAC19\uC544\uC694. \uADF8\uC804\uAE4C\uC9C4 \uB0B4\uBD80 \uB85C\uADF8\uD398\uC774\uC9C0\uB85C \uB300\uCCB4\uD558\uB824\uD569\uB2C8\uB2E4.'
-                )
+                _react2.default.createElement('img', { className: 'myFace', src: _img2.default })
             );
         }
     }]);
