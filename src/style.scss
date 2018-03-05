@@ -510,7 +510,7 @@ iframe {
     @each $i in $list {
         &[data-x="#{$i}"] {
             width: 100vmin;
-            margin: auto;
+            margin: 0 0 0 -1rem;
             padding-top: .5vmin * 11/$i;
 
             &:before {
@@ -628,7 +628,7 @@ iframe {
                 position: relative;
                 display: block;
                 height: calc(100% / 3);
-                font-size: 80%;
+                font-size: 65%;
                 background: #fff;
 
                 i {
