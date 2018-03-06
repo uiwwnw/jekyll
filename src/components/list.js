@@ -4,8 +4,7 @@ const noinput = '날짜미기입';
 
 let list = [
     {
-        'text': '낱말게임 프로그램 제작',
-        'link': 'https://github.com/uiwwnw/v_wordgame',
+        'text': '젠킨스등을 활용하여 빌드시스템 구축',
         'time': incomplete
     },
     {
