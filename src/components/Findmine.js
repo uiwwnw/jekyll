@@ -384,7 +384,7 @@ class I extends Box {
                 </div>
         }
         return (
-            <div className="box" onMouseUp={this.up.bind(this)} onMouseDown={this.down.bind(this)} onTouchEnd={this.up.bind(this)} onTouchStart={this.down.bind(this)} onMouseOut={this.out.bind(this)} >
+            <div className="box" onMouseUp={this.up.bind(this)} onMouseDown={this.down.bind(this)} onTouchStart={this.down.bind(this)} onMouseOut={this.out.bind(this)} >
                 <span className="map" id={this.props.id} onClick={this.props.onClick.bind(this)}></span>
                 {popover}
             </div>

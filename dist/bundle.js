@@ -11078,7 +11078,7 @@ var I = function (_Box) {
             }
             return _react2.default.createElement(
                 'div',
-                { className: 'box', onMouseUp: this.up.bind(this), onMouseDown: this.down.bind(this), onTouchEnd: this.up.bind(this), onTouchStart: this.down.bind(this), onMouseOut: this.out.bind(this) },
+                { className: 'box', onMouseUp: this.up.bind(this), onMouseDown: this.down.bind(this), onTouchStart: this.down.bind(this), onMouseOut: this.out.bind(this) },
                 _react2.default.createElement('span', { className: 'map', id: this.props.id, onClick: this.props.onClick.bind(this) }),
                 popover
             );
