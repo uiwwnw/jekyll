@@ -1,0 +1,29 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bdrs{
+  -webkit-border-radius:$border-radius-m;
+  -moz-border-radius:$border-radius-m;
+  border-radius:$border-radius-m;
+}

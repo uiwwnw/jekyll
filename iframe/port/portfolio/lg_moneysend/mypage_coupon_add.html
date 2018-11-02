@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>뒤로가기버튼</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">혜택 더 보기</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article class="list_article">
+                <div class="notice_txt">적용 가능한 혜택이 3개 있습니다.</div>
+                <label class="rdo_benefit">
+                    <input type="radio" name="lang"><i class="_rdo"></i>
+                    <!--<img src="img/korean.jpg" alt="태극기">-->
+                    <div class="_rdo_align_box">
+                        <div>
+                            <p class="_help">LG U+ 고객감사 혜택</p>
+                            <p class="_money">4000원 할인</p>
+                            <!--<p class="_time">한국어</p>-->
+                        </div>
+                    </div>
+                </label>
+                <label class="rdo_benefit">
+                    <input type="radio" name="lang"><i class="_rdo"></i>
+                    <!--<img src="img/korean.jpg" alt="태극기">-->
+                    <div class="_rdo_align_box">
+                        <div>
+                            <p class="_help">3회 송금 시</p>
+                            <p class="_money">1000원 할인</p>
+                            <!--<p class="_time">한국어</p>-->
+                        </div>
+                    </div>
+                </label>
+                <label class="rdo_benefit">
+                    <input type="radio" name="lang"><i class="_rdo"></i>
+                    <!--<img src="img/korean.jpg" alt="태극기">-->
+                    <div class="_rdo_align_box">
+                        <div>
+                            <p class="_help">3회 송금 시</p>
+                            <p class="_money">1000원 할인</p>
+                            <!--<p class="_time">한국어</p>-->
+                        </div>
+                    </div>
+                </label>
+            </article>
+            <article class="list_article">
+                <div class="notice_txt">사용 가능한 쿠폰이 3개 있습니다.</div>
+                <label class="rdo_benefit">
+                    <input type="radio" name="lang"><i class="_rdo"></i>
+                    <!--<img src="img/korean.jpg" alt="태극기">-->
+                    <div class="_rdo_align_box">
+                        <div>
+                            <p class="_help">첫 송금 이벤트</p>
+                            <p class="_money">100원 할인</p>
+                            <p class="_time">2016.11.30까지</p>
+                        </div>
+                    </div>
+                </label>
+                <label class="rdo_benefit">
+                    <input type="radio" name="lang"><i class="_rdo"></i>
+                    <!--<img src="img/korean.jpg" alt="태극기">-->
+                    <div class="_rdo_align_box">
+                        <div>
+                            <p class="_help">첫 송금 이벤트</p>
+                            <p class="_money">100원 할인</p>
+                            <p class="_time">2016.11.30까지</p>
+                        </div>
+                    </div>
+                </label>
+                <label class="rdo_benefit">
+                    <input type="radio" name="lang"><i class="_rdo"></i>
+                    <!--<img src="img/korean.jpg" alt="태극기">-->
+                    <div class="_rdo_align_box">
+                        <div>
+                            <p class="_help">첫 송금 이벤트</p>
+                            <p class="_money">100원 할인</p>
+                            <p class="_time">2016.11.30까지</p>
+                        </div>
+                    </div>
+                </label>
+                <div class="btn_wrap">
+                    <div>
+                        <button class="btn_block btn_danger" type="button">
+                            <span>쿠폰 등록</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn_block btn_danger" type="button">
+                            <span>혜택 사용</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+<div id="dialog" title="쿠폰 등록" style="display:none;" class="has_close">
+    <div class="dialog_outer">
+        <div class="dialog_inner">
+            <i class="icon-coupon main_img"></i>
+            <div class="form">
+                <div class="_form_flex">
+                    <div class="box_inp_wrap del_on">
+                        <label class="box_inp focus_on">
+                            <input type="text" placeholder="쿠폰번호를 정확히 입력해주세요.">
+                        </label>
+                        <button class="_delete"><i class="x_close_small"></i></button>
+                    </div>
+                </div>
+                <p class="help_large text_left">등록할 수 없는 쿠폰입니다.</p>
+            </div>
+            <p class="notice_txt_small"><strong>쿠폰 사용 안내</strong></p>
+            <p class="notice_txt_small">유효 기간이 지난 쿠폰은 사용할 수 없습니다.
+                쿠폰은 현금 교환 및 환불이 되지 않습니다.
+                쿠폰 등록 하시면, [쿠폰함]에 등록된 쿠폰 확인
+                가능합니다. 쿠폰 제공 정책에 따라 일부 사용이
+                제한 될 수 있습니다.
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#dialog").dialog({
+            draggable: false,
+            resizable: false,
+            height: "auto",
+            width: "calc(100% - 3rem)",
+            modal: true,
+            buttons: {
+                "SAVE": {
+                    click: function () {
+                        $(this).dialog("close");
+                    },
+                    text: '변경하기',
+                    class: 'btn_danger'
+                }
+            }
+        });
+        if($("#dialog").hasClass('no_title')){
+            $(".ui-dialog-titlebar").addClass('no_title');
+        }
+        if($("#dialog").hasClass('has_close')){
+            $(".ui-dialog-titlebar").addClass('has_close')
+        }
+        if($("#dialog").hasClass('no_button')){
+            $(this).addClass('no_button')
+        }
+    })
+</script>
+</body>
+
+</html>

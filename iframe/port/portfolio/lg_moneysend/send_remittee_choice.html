@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>닫기아이콘</span>
+            <i class="x_close"></i>
+        </button>
+        <h1 class="_title_center">송금하기</h1>
+    </header>
+    <section class="pro_tab_area">
+        <button class="btn_txt" href="#">
+            <p class="_s_txt">STEP1</p>
+            <p>송금인</p>
+        </button>
+        <button class="btn_txt" href="#">
+            <p class="_s_txt">STEP2</p>
+            <p>수취인</p>
+        </button>
+        <button class="btn_txt on" href="#">
+            <p class="_s_txt">STEP3</p>
+            <p>최종내역</p>
+        </button>
+    </section>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <button class="btn_block add_btn" type="button">
+                    <i class="icon-add_person"></i>
+                    <span>새로운 수취인에게 송금</span>
+                </button>
+            </article>
+            <article>
+                <div class="results_wrap">
+                    <p class="_title">최근 송금 이력<strong class="_results_num">4</strong>명</p>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="address">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_person_name">
+                            <img class="_country" src="img/american.jpg" alt="미국국기">
+                            <span class="_name">Chris Brown</span>
+                        </div>
+                        <p class="_rdo_txt">
+                            <span class="_br">계좌 수취1</span>
+                            Bank Of Asia 102-38102-1212
+                        </p>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="address">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_person_name">
+                            <img class="_country" src="img/american.jpg" alt="미국국기">
+                            <span class="_name">Chris Brown</span>
+                        </div>
+                        <p class="_rdo_txt">
+                            <span class="_br">계좌 수취1</span>
+                            Bank Of Asia 102-38102-1212
+                        </p>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="address">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_person_name">
+                            <img class="_country" src="img/american.jpg" alt="미국국기">
+                            <span class="_name">Chris Brown</span>
+                        </div>
+                        <p class="_rdo_txt">
+                            <span class="_br">계좌 수취1</span>
+                            Bank Of Asia 102-38102-1212
+                        </p>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="address">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_person_name">
+                            <img class="_country" src="img/american.jpg" alt="미국국기">
+                            <span class="_name">Chris Brown</span>
+                        </div>
+                        <p class="_rdo_txt">
+                            <span class="_br">계좌 수취1</span>
+                            Bank Of Asia 102-38102-1212
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!--<article>-->
+                <!--<div class="btn_wrap">-->
+                    <!--<div>-->
+                        <!--<button class="btn_block btn_danger" type="button">-->
+                            <!--<span>수정</span>-->
+                        <!--</button>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<button class="btn_block btn_danger" type="button">-->
+                            <!--<span>다음</span>-->
+                        <!--</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</article>-->
+        </section>
+    </div>
+    <footer class="btn_area">
+        <div class="btn_wrap">
+            <div>
+                <button class="btn_block btn_danger" type="button">
+                    <span>수정</span>
+                </button>
+            </div>
+            <div>
+                <button class="btn_block btn_danger" type="button">
+                    <span>다음</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>

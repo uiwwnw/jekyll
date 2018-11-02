@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area fullpop popup_num1">
+    <header class="title_area">
+        <button class="_btn_left btn_icon common-close" type="button" data-class="popup_num1">
+            <span>뒤로가기버튼</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">도시 선택</h1>
+    </header>
+    <section class="content_area">
+        <article class="search_article">
+            <!--취소 라는 글자 버튼 필요시 box_inp_wrap 클래스에 cancel_on 추가하세요-->
+            <div class="box_inp_wrap">
+                <label class="box_inp">
+                    <input type="search" placeholder="국가명(국가코드)을 입력하세요">
+                </label>
+                <button class="_cancel">취소</button>
+                <button class="_delete"><i class="x_close_small"></i></button>
+            </div>
+        </article>
+    </section>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <div class="results_wrap">
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="country">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_rdo_align_box">
+                            <img class="_not_vertical flag" src="img/korean.jpg" alt="대한민국">
+                            <span class="_name">국가명(국가코드)</span>
+                        </div>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="country">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_rdo_align_box">
+                            <img class="_not_vertical flag" src="img/korean.jpg" alt="대한민국">
+                            <span class="_name">국가명(국가코드)</span>
+                        </div>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="country">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_rdo_align_box">
+                            <img class="_not_vertical flag" src="img/korean.jpg" alt="대한민국">
+                            <span class="_name">국가명(국가코드)</span>
+                        </div>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="country">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_rdo_align_box">
+                            <img class="_not_vertical flag" src="img/korean.jpg" alt="대한민국">
+                            <span class="_name">국가명(국가코드)</span>
+                        </div>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="country">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_rdo_align_box">
+                            <img class="_not_vertical flag" src="img/korean.jpg" alt="대한민국">
+                            <span class="_name">국가명(국가코드)</span>
+                        </div>
+                    </div>
+                    <div class="rdo_wrap">
+                        <label class="_rdo_box">
+                            <input type="radio" name="country">
+                            <i class="_rdo"></i>
+                        </label>
+                        <div class="_rdo_align_box">
+                            <img class="_not_vertical flag" src="img/korean.jpg" alt="대한민국">
+                            <span class="_name">국가명(국가코드)</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer class="btn_area">
+        <div class="btn_wrap">
+            <div>
+                <button class="btn_block btn_danger" type="button">
+                    <span>확인</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+</div>
+<button class="btn_block btn_dark common-view" data-class="popup_num1">
+    <span>full popup open</span>
+</button>
+</body>
+</html>

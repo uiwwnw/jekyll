@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGU+ 해외송금</title>
+    <!--jquery-->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+
+    <!--jquery ui-->
+    <script src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!--lib-->
+    <script src="lib/blockui/jquery.blockUI.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <!--default js-->
+    <script src="js/default.js"></script>
+    <!--<script src="js/sample.js"></script>-->
+
+
+    <!--jquery ui css-->
+    <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <!--style css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--icomonn css-->
+    <link rel="stylesheet" href="lib/icomoon/style.css">
+</head>
+<body>
+<div class="area">
+    <header class="title_area">
+        <button class="_btn_left btn_icon" type="button">
+            <span>뒤로가기아이콘</span>
+            <i class="prev_arrow"></i>
+        </button>
+        <h1 class="_title_center">회원 탈퇴</h1>
+    </header>
+    <div class="_area_scroll">
+        <section class="content_area">
+            <article>
+                <div class="find_title center_title">
+                    <div>
+                        <i class="icon-remove_person main_img"></i>
+                        <h1 class="_title">회원 탈퇴 이전에 다음 사항을<br>꼭 확인해주세요!</h1>
+                    </div>
+                </div>
+                <dl class="notice_txt_small">
+                    <dt> ※ 탈퇴 시 송금 요청한 정보와 쿠폰 등은 모두 소멸되며
+                        재가입 하더라도 복구되지 않습니다.
+                    </dt>
+                </dl>
+                <dl class="notice_txt_small">
+                    <dt> ※ 탈퇴 후 회원정보 및 개인 모두 삭제됩니다.</dt>
+                    <dd> - 회원정보 및 송금 내역 등 개인이 사용하던 이용 기록은
+                        모두 삭제되어 복구되지 않습니다.
+                    </dd>
+                </dl>
+                <dl class="notice_txt_small">
+                    <dt>※ 탈퇴 후에도 외국환거래법에 따라 개인의 송금 한도
+                        관리를 위해 송금 내역은 당해 년도까지 저장됩니다.
+                    </dt>
+                </dl>
+                <dl class="notice_txt_small">
+                    <dt> ※ 탈퇴 후에도 게시판 형 서비스에 등록한 게시물은
+                        그대로 남아 있습니다.
+                    </dt>
+                    <dd> - 각종 이벤트 등 공개 게시물은 삭제되지 않습니다.
+                    </dd>
+                    <dd> - 삭제를 원하는 게시물이 있다면 반드시 탈퇴 전
+                        삭제하시기 바랍니다.
+                    </dd>
+                    <dd> - 탈퇴 후에는 회원정보가 삭제되어 본인의 게시물 임을
+                        확인할 방법이 없으므로 임의 삭제해드릴 수 없습니다.
+                    </dd>
+                    <dd> - 탈퇴 후에는 개인의 데이터를 복구할 수 없으며,
+                        서비스에 남아있는 게시물을 삭제할 수 없습니다.
+                    </dd>
+                </dl>
+                <div class="line_box">
+                    <p class="notice_txt">
+                        회원 탈퇴 사유를 남겨주세요. 남겨주신 소중한
+                        정보를 바탕으로 더욱 열심히 하겠습니다.
+                    </p>
+                    <div class="form">
+                        <div class="_form_flex">
+                            <div>
+                                <div class="slt_wrap">
+                                    <select class="_slt">
+                                        <option value="기타(직접 입력)">기타(직접 입력)</option>
+                                        <option value="회원 탈퇴 사유 선택">회원 탈퇴 사유 선택</option>
+                                        <option value="자주 사용하지 않아요.">자주 사용하지 않아요.</option>
+                                        <option value="회원 혜택이 없어요.">회원 혜택이 없어요.</option>
+                                        <option value="시스템 오류가 잦아요.">시스템 오류가 잦아요.</option>
+                                        <option value="개인 정보 및 보안이 걱정돼요.">개인 정보 및 보안이 걱정돼요.</option>
+                                        <option value="사용하기 어려워요.">사용하기 어려워요.</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="_form_inner_wrap">
+                            <div class="box_inp_wrap">
+                                <label class="box_ta">
+                                    <textarea placeholder="" rows="4">직접입력</textarea>
+                                </label>
+                                <button class="_delete"><i class="x_close_small"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line_box">
+                    <div class="chk_box">
+                        <label>
+                            <input type="checkbox">
+                            <i class="_check"></i>
+                        </label>
+                        <span class="_txt">안내사항을 모두 확인하였으며,이에 동의합니다.</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer class="btn_area">
+        <div class="btn_wrap">
+            <div>
+                <button class="btn_block btn_danger" type="button" disabled="disabled">
+                    <span>회원탈퇴</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
