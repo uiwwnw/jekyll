@@ -16,7 +16,7 @@ const config = {
         filename: './bundle.js'
     },
     devServer: {
-        contentBase: path.join(__dirname),
+        contentBase: path.join(__dirname, 'dist'),
         inline: true,
         port: 8800,
         hot: true,
@@ -42,7 +42,7 @@ const config = {
             , {
                 test: /\.(jpg|png)$/,
                 loader: [
-                    'file-loader?name=./dist/img/[hash].[ext]'
+                    'file-loader?name=/img/[hash].[ext]'
                 ]
             }
             , {
@@ -56,7 +56,7 @@ const config = {
             }
             , {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-                loader: 'file-loader?name=./dist/font/[hash].[ext]'
+                loader: 'file-loader?name=/font/[hash].[ext]'
             }
         ]
     },
