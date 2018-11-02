@@ -5,7 +5,7 @@ class Nav extends React.Component {
     render() {
         let items = this.props.menu.map(function (tab, idx) {
             return (
-                <NavLink to={tab.name==='Home'?'/':'/'+tab.name.toLocaleLowerCase()} key={idx} onClick={this.props.onTab} data-tab-key={idx}>{tab.name}</NavLink>
+                <NavLink to={tab.name==='Home'?'/portfolio/':'/portfolio/'+tab.name.toLocaleLowerCase()} key={idx} onClick={this.props.onTab} data-tab-key={idx}>{tab.name}</NavLink>
                 );
         }, this);
         

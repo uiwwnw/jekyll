@@ -12,8 +12,8 @@ const config = {
     context: path.resolve(__dirname, 'src'),
     entry: './index.js',
     output: {
-        path: __dirname,
-        filename: './dist/bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: './bundle.js'
     },
     devServer: {
         contentBase: path.join(__dirname),

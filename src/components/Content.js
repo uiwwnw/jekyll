@@ -23,14 +23,14 @@ class Content extends React.Component {
         // }, this);
         return (
             <section className={this.props.className}>
-                <Route exact path="/" component={Home}/>
+                <Route exact path="/portfolio/" component={Home}/>
                 <Switch>
                     {/* <Route path="/" component={Home}/> */}
-                    <Route path="/contact" component={Contact}/>
-                    <Route path="/portfolio" component={Portfolio}/>
-                    <Route path="/storytelling" component={Storytelling}/>
-                    <Route path="/findmine" component={Findmine}/>
-                    <Route path="/log" component={Log}/>
+                    <Route path="/portfolio/contact" component={Contact}/>
+                    <Route path="/portfolio/portfolio" component={Portfolio}/>
+                    <Route path="/portfolio/storytelling" component={Storytelling}/>
+                    <Route path="/portfolio/findmine" component={Findmine}/>
+                    <Route path="/portfolio/log" component={Log}/>
                     
                 </Switch>
                 {/* <Route path="/about" component={About}/> */}
