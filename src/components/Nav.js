@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Nav extends React.Component {
     render() {
         let items = this.props.menu.map(function (tab, idx) {
             return (
-                <button key={idx} onClick={this.props.onTab} data-tab-key={idx}>{tab.name}</button>
+                <NavLink to={tab.name==='Home'?'/':'/'+tab.name.toLocaleLowerCase()} key={idx} onClick={this.props.onTab} data-tab-key={idx}>{tab.name}</NavLink>
                 );
         }, this);
         

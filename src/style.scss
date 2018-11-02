@@ -294,12 +294,13 @@ main {
     [data-align] {
         width: 80%;
     }
-    button {
+    a {
         display: block;
         width: 100%;
         line-height: 1.4;
         font-size: 2rem;
         text-align: center;
+        text-decoration: none;
         pointer-events: all;
     }
     @keyframes zoom {

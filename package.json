@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --watch",
+    "server": "webpack-dev-server --inline --hot",
     "build": "webpack -p"
   },
   "repository": {
@@ -27,6 +28,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.5.4",
     "react-iscroll": "^2.0.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-tabs": "^1.1.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",

@@ -41,7 +41,7 @@ class Contact extends React.Component {
         return (
             <article>
                 <h2>개인연락처</h2>
-                <button className="link" onClick={this.props.fnSendMail.bind(this)}><i className="icon-mail"></i>uiwwnw@icloud.com</button>
+                <button className="link"><i className="icon-mail"></i>uiwwnw@icloud.com</button>
                 <a className="link" href="https://github.com/uiwwnw"><i className="icon-github-circled-alt"></i>https://github.com/uiwwnw</a>
                 {sendMail}
             </article>

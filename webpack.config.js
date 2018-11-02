@@ -15,11 +15,12 @@ const config = {
         path: __dirname,
         filename: './dist/bundle.js'
     },
-
     devServer: {
+        contentBase: path.join(__dirname),
         inline: true,
-        port: 7777,
-        contentBase: __dirname + 'dist/'
+        port: 8800,
+        hot: true,
+        historyApiFallback: true
     },
     devtool: 'source-map', // any 'source-map'-like devtool is possible
     module: {
@@ -82,7 +83,6 @@ const config = {
         })
         , extractSass
     ]
-
 };
 
 // if (process.env.NODE_ENV === 'production') {

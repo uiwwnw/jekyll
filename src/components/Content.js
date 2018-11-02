@@ -1,41 +1,40 @@
 import React from 'react';
-import Home from './Home';
-import Portfolio from './Portfolio';
-import Contact from './Contact';
-import Storytelling from './Storytelling';
-import Findmine from './Findmine';
-import Log from './Log';
+// import Home from './Home';
+// import Portfolio from './Portfolio';
+// import Contact from './Contact';
+// import Storytelling from './Storytelling';
+// import Findmine from './Findmine';
+// import Log from './Log';
+import { default as Home } from './Home';
+import { default as Portfolio } from './Portfolio';
+import { default as Contact } from './Contact';
+import { default as Storytelling } from './Storytelling';
+import { default as Findmine } from './Findmine';
+import { default as Log } from './Log';
+import { Route, Switch } from 'react-router-dom';
 
 class Content extends React.Component {
     render() {
-        let content;
-        if (this.props.content === this.props.menu[0].name) {
-            content = <Home />
-        }
-        if (this.props.content === this.props.menu[1].name) {
-            content = <Portfolio />
-        }
-        if (this.props.content === this.props.menu[2].name) {
-            content = <Contact fnSendMail={this.props.fnSendMail.bind(this)} popup={this.props.popup}/>
-        }
-        if (this.props.content === this.props.menu[3].name) {
-            content = <Storytelling />
-        }
-        if (this.props.content === this.props.menu[4].name) {
-            content = <Findmine />
-        }
-        if (this.props.content === this.props.menu[5].name) {
-            content = <Log />
-        }
-        // for (var i = 0; i < this.props.menu.length; i++) {
-        //     if (this.props.content == this.props.menu[i].name) {
-        //         var name = this.props.menu[i].name;
-        //         content = name
+        // let route = this.props.menu.map(function (tab, idx) {
+        //     if(tab.name!=='Home') {
+        //         return (
+        //             <Route path={'/'+tab.name.toLocaleLowerCase()} component={tab.name} key={idx} />                 );
         //     }
-        // }
+        // }, this);
         return (
             <section className={this.props.className}>
-                {content}
+                <Route exact path="/" component={Home}/>
+                <Switch>
+                    {/* <Route path="/" component={Home}/> */}
+                    <Route path="/contact" component={Contact}/>
+                    <Route path="/portfolio" component={Portfolio}/>
+                    <Route path="/storytelling" component={Storytelling}/>
+                    <Route path="/findmine" component={Findmine}/>
+                    <Route path="/log" component={Log}/>
+                    
+                </Switch>
+                {/* <Route path="/about" component={About}/> */}
+                {/* {content} */}
             </section>
         );
     }

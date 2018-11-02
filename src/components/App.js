@@ -4,6 +4,7 @@ import Content from './Content';
 import Nav from './Nav';
 import Footer from './Footer';
 import menu from './menu';
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends React.Component {
     constructor() {
@@ -43,13 +44,15 @@ class App extends React.Component {
                 <i className="dim" onClick={this.closeAll.bind(this)}></i>
         }
         return (
-            <main className={this.state.hasOpen?'openPopup':''} >
-                {header}
-                {nav}
-                <Content content={this.state.content} menu={menu} className={contentClassName} popup={this.state.popup} fnSendMail={this.fnSendMail.bind(this)}/>
-                {footer}
-                {dim}
-            </main>
+            <BrowserRouter>
+                <main className={this.state.hasOpen?'openPopup':''} >
+                    {header}
+                    {nav}
+                    <Content content={this.state.content} menu={menu} className={contentClassName} popup={this.state.popup} />
+                    {footer}
+                    {dim}
+                </main>
+            </BrowserRouter>
         );
     }
     closeAll() {
@@ -65,13 +68,13 @@ class App extends React.Component {
             navActive: true
         })
     }
-    fnSendMail(){
-        // const idx = Number(e.target.getAttribute('data-tab-key'));
-        this.setState({
-            hasOpen: !this.state.hasOpen,
-            popup: !this.state.popup
-        });
-    }
+    // fnSendMail(){
+    //     // const idx = Number(e.target.getAttribute('data-tab-key'));
+    //     this.setState({
+    //         hasOpen: !this.state.hasOpen,
+    //         popup: !this.state.popup
+    //     });
+    // }
     changeTab(e) {
         const tabNum = Number(e.target.getAttribute('data-tab-key'));
         // if (tabNum === menu[0].id) {
